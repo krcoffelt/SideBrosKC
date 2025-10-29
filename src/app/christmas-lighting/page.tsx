@@ -36,32 +36,36 @@ const packageOptions = [
 export default function ChristmasLightingPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-indigo-800 via-slate-900 to-slate-950 py-24 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#120d2a] via-[#090714] to-black py-24 text-white">
         <div className="absolute inset-0">
-          <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-purple-500/20 blur-3xl" />
+          <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-purple-500/25 blur-3xl" />
+          <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-purple-400/20 blur-3xl" />
         </div>
         <Container className="relative grid items-center gap-12 lg:grid-cols-[1.1fr,1fr]">
           <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-indigo-200">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-200">
               Christmas Lighting
             </p>
             <h1 className="text-4xl font-bold sm:text-5xl">
               Make Your Property Shine All Season Long
             </h1>
-            <p className="text-base text-indigo-100">
+            <p className="text-base text-purple-100/85">
               From rooftop outlines to commercial campus displays, we design, install, maintain, and
               remove custom lighting that keeps your property glowing all season.
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               {lightingFeatures.map((feature) => (
-                <div key={feature} className="flex items-center gap-3 rounded-2xl border border-indigo-500/30 bg-indigo-500/10 p-4">
-                  <CheckIcon className="h-5 w-5 text-indigo-200" />
-                  <p className="text-sm text-indigo-100">{feature}</p>
+                <div
+                  key={feature}
+                  className="flex items-center gap-3 rounded-3xl border border-purple-400/30 bg-purple-500/10 p-4 shadow-[0_18px_45px_rgba(124,58,237,0.3)]"
+                >
+                  <CheckIcon className="h-5 w-5 text-purple-100" />
+                  <p className="text-sm text-purple-100/90">{feature}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-3xl border border-indigo-500/30 shadow-2xl">
+          <div className="relative overflow-hidden rounded-3xl border border-purple-400/25 shadow-[0_30px_90px_rgba(124,58,237,0.35)]">
             <Image
               src="https://images.unsplash.com/photo-1573575159775-0c5f4e2ce32f?auto=format&fit=crop&w=1200&q=80"
               alt="Custom holiday lighting on a home"
@@ -74,16 +78,19 @@ export default function ChristmasLightingPage() {
         </Container>
       </section>
 
-      <section className="py-16">
+      <section className="py-20">
         <Container>
           <div className="grid gap-8 lg:grid-cols-[1fr,1fr]">
             {packageOptions.map((pkg) => (
-              <div key={pkg.name} className="rounded-3xl border border-slate-200 p-8 shadow-sm">
-                <h2 className="text-2xl font-bold text-slate-900">{pkg.name} Packages</h2>
-                <ul className="mt-6 space-y-3 text-sm text-slate-600">
+              <div
+                key={pkg.name}
+                className="glass-panel rounded-3xl border border-white/10 bg-white/5 p-8 text-white"
+              >
+                <h2 className="text-2xl font-bold">{pkg.name} Packages</h2>
+                <ul className="mt-6 space-y-3 text-sm text-slate-200/80">
                   {pkg.details.map((detail) => (
                     <li key={detail} className="flex items-start gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-indigo-500" aria-hidden="true" />
+                      <span className="mt-1 h-2 w-2 rounded-full bg-purple-400" aria-hidden="true" />
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -94,31 +101,31 @@ export default function ChristmasLightingPage() {
         </Container>
       </section>
 
-      <section className="bg-slate-50 py-16">
+      <section className="py-20">
         <Container className="grid gap-12 lg:grid-cols-[1.1fr,1fr]">
           <div className="space-y-5">
-            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">
               A full-service lighting experience
             </h2>
-            <ol className="space-y-4 border-l-2 border-indigo-200 pl-6 text-sm text-slate-600">
+            <ol className="space-y-4 border-l-2 border-purple-400/40 pl-6 text-sm text-slate-200/80">
               <li>
-                <strong className="block font-semibold text-slate-900">Consultation</strong>
+                <strong className="block font-semibold text-white">Consultation</strong>
                 Walk the property, align on vision, and capture measurements for a perfect fit.
               </li>
               <li>
-                <strong className="block font-semibold text-slate-900">Design</strong>
+                <strong className="block font-semibold text-white">Design</strong>
                 Custom-cut C9 LEDs, ground lighting, and accent elements tailored to your space.
               </li>
               <li>
-                <strong className="block font-semibold text-slate-900">Installation</strong>
+                <strong className="block font-semibold text-white">Installation</strong>
                 Safe, efficient setup with weatherproof hardware and timers configured for you.
               </li>
               <li>
-                <strong className="block font-semibold text-slate-900">Maintenance</strong>
+                <strong className="block font-semibold text-white">Maintenance</strong>
                 Burned-out bulb? Loose strand? We’re on call all season to keep things shining.
               </li>
               <li>
-                <strong className="block font-semibold text-slate-900">Takedown & Storage</strong>
+                <strong className="block font-semibold text-white">Takedown & Storage</strong>
                 Hassle-free removal and organized storage until next season.
               </li>
             </ol>

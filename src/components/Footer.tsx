@@ -4,24 +4,24 @@ import { companyInfo, navigation } from "@/data/company";
 
 export function Footer() {
   return (
-    <footer className="mt-16 bg-slate-950 text-slate-200">
+    <footer className="mt-16 border-t border-white/10 bg-black/70 text-slate-200 backdrop-blur-xl">
       <Container className="grid gap-12 py-12 lg:grid-cols-[2fr,1fr]">
         <div className="space-y-6">
           <div>
             <h2 className="text-2xl font-semibold text-white">{companyInfo.name}</h2>
-            <p className="mt-1 text-sm text-indigo-200">{companyInfo.tagline}</p>
+            <p className="mt-1 text-sm text-purple-200">{companyInfo.tagline}</p>
           </div>
           <div className="grid gap-3 text-sm sm:grid-cols-2">
             <div>
               <h3 className="font-semibold text-white">Contact</h3>
               <ul className="mt-2 space-y-1">
                 <li>
-                  <a href={companyInfo.phoneHref} className="hover:text-indigo-300">
+                  <a href={companyInfo.phoneHref} className="hover:text-purple-200">
                     {companyInfo.phone}
                   </a>
                 </li>
                 <li>
-                  <a href={`mailto:${companyInfo.email}`} className="hover:text-indigo-300">
+                  <a href={`mailto:${companyInfo.email}`} className="hover:text-purple-200">
                     {companyInfo.email}
                   </a>
                 </li>
@@ -44,11 +44,11 @@ export function Footer() {
               </Link>
             ))}
           </div>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} {companyInfo.name}. All rights reserved. {companyInfo.licensedInsured}.
           </p>
         </div>
-        <div className="overflow-hidden rounded-2xl border border-slate-800 shadow-lg">
+        <div className="overflow-hidden rounded-2xl border border-white/10 shadow-lg">
           <iframe
             title="Side Bros KC LLC on Google Maps"
             src={companyInfo.googleMapsEmbedSrc}

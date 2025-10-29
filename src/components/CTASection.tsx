@@ -19,30 +19,30 @@ export function CTASection({
   secondaryHref = "/contact",
 }: CTASectionProps) {
   return (
-    <section className="py-16">
+    <section className="py-24">
       <Container>
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-slate-900 to-slate-950 p-10 text-white shadow-xl">
+        <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-purple-600/40 via-black/60 to-black/90 p-12 text-white shadow-[0_35px_120px_rgba(112,66,255,0.45)]">
           <div className="max-w-3xl space-y-4">
             <h2 className="text-3xl font-bold sm:text-4xl">{title}</h2>
-            <p className="text-base text-indigo-100">{subtitle}</p>
+            <p className="text-base text-purple-100/90">{subtitle}</p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={companyInfo.phoneHref}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-100"
+                className="accent-button text-white hover:opacity-90"
               >
                 <PhoneIcon className="h-4 w-4" />
                 {primaryLabel}: {companyInfo.phone}
               </a>
               <Link
                 href={secondaryHref}
-                className="inline-flex items-center justify-center rounded-full border border-indigo-200 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="secondary-button"
               >
                 {secondaryLabel}
               </Link>
             </div>
           </div>
-          <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-indigo-400/30 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-16 right-10 h-56 w-56 rounded-full bg-purple-500/20 blur-3xl" />
+          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-purple-500/35 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-20 left-10 h-64 w-64 rounded-full bg-purple-300/20 blur-3xl" />
         </div>
       </Container>
     </section>

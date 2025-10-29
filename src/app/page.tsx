@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { companyInfo } from "@/data/company";
+import { Container } from "@/components/Container";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { ServiceHighlights } from "@/components/ServiceHighlights";
 import { TrustSignals } from "@/components/TrustSignals";
@@ -16,7 +17,7 @@ const projectGallery = [
   {
     label: "Commercial storefront pressure washing",
     before:
-      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1505692794403-55b39ed0b28f?auto=format&fit=crop&w=1400&q=80",
     after:
       "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1400&q=80",
   },
@@ -32,100 +33,115 @@ const projectGallery = [
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-slate-950">
-        <div className="absolute inset-0">
-          <div className="absolute -left-32 top-10 h-64 w-64 rounded-full bg-indigo-500/20 blur-3xl" />
-          <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" />
-        </div>
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 sm:px-6 lg:flex-row lg:items-center lg:px-8 lg:py-24">
-          <div className="max-w-xl space-y-6 text-white">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-200">
-              Exterior Cleaning Pros
-            </p>
-            <h1 className="text-4xl font-bold sm:text-5xl">
-              The Bros Who Bring the Shine to KC.
-            </h1>
-            <p className="text-base text-indigo-100">
-              Restore curb appeal, protect your investment, and light up every season with Side
-              Bros KC LLC’s professional power washing, concrete staining, and Christmas lighting
-              services.
-            </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-indigo-700 shadow-lg shadow-white/10 transition hover:-translate-y-0.5 hover:bg-indigo-50"
-              >
-                Get a Free Quote
-              </Link>
-              <a
-                href={companyInfo.phoneHref}
-                className="inline-flex items-center justify-center rounded-full border border-indigo-200 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                Call {companyInfo.phone}
-              </a>
+      <section className="relative py-20">
+        <Container className="relative grid items-center gap-10 lg:grid-cols-[1.05fr,1fr]">
+          <div className="glass-panel card-gradient relative overflow-hidden p-10">
+            <div className="absolute -top-32 -left-28 h-72 w-72 rounded-full bg-purple-500/30 blur-3xl" />
+            <div className="absolute -bottom-36 right-0 h-72 w-72 rounded-full bg-purple-400/20 blur-3xl" />
+            <div className="relative space-y-6">
+              <div className="flex items-center justify-between">
+                <span className="stat-chip text-purple-200">Trusted KC Pros</span>
+                <div className="flex items-center gap-2 rounded-full bg-black/40 px-4 py-2 text-xs font-semibold text-amber-200">
+                  ★★★★★ <span className="text-white/70">5.0 Google Rating</span>
+                </div>
+              </div>
+              <h1 className="text-4xl font-bold text-white sm:text-5xl">
+                The Bros Who Bring the Shine to KC.
+              </h1>
+              <p className="max-w-xl text-sm text-purple-100/90 sm:text-base">
+                Your go-to crew for professional power washing, concrete staining, gutter cleaning,
+                and custom Christmas lighting. Licensed, insured, and obsessed with dialed-in
+                details that make your property stand out.
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Link href="/contact" className="accent-button text-white hover:opacity-90">
+                  Get a Free Quote
+                </Link>
+                <a href={companyInfo.phoneHref} className="secondary-button">
+                  Call {companyInfo.phone}
+                </a>
+              </div>
+              <div className="grid gap-4 border-t border-white/10 pt-6 text-sm text-purple-100 sm:grid-cols-3">
+                <div>
+                  <p className="text-3xl font-bold text-white">4500+</p>
+                  <p className="text-xs uppercase tracking-widest text-purple-200/70">
+                    Surfaces Restored
+                  </p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-white">2500+</p>
+                  <p className="text-xs uppercase tracking-widest text-purple-200/70">
+                    Kansas City Clients
+                  </p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-white">100%</p>
+                  <p className="text-xs uppercase tracking-widest text-purple-200/70">
+                    Licensed & Insured
+                  </p>
+                </div>
+              </div>
             </div>
-            <dl className="grid grid-cols-2 gap-4 text-sm text-indigo-100 sm:grid-cols-3">
-              <div>
-                <dt className="font-semibold text-white">Founded</dt>
-                <dd>{companyInfo.founded}</dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-white">Service Area</dt>
-                <dd>{companyInfo.serviceAreas.join(", ")}</dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-white">Credentials</dt>
-                <dd>{companyInfo.licensedInsured}</dd>
-              </div>
-            </dl>
           </div>
-          <div className="w-full max-w-xl">
+          <div className="glass-panel relative overflow-hidden p-4">
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-purple-500/20 via-transparent to-black/60" />
             <BeforeAfterSlider beforeSrc={heroBefore} afterSrc={heroAfter} label="Siding cleaning" />
           </div>
-        </div>
+        </Container>
       </section>
 
-      <section className="bg-indigo-600 px-4 py-4 text-center text-sm text-white sm:text-base">
-        <p>
-          Winter Special: Book Christmas lighting by October 15 and save 10% on installation.
-          <Link href="/contact" className="ml-2 font-semibold underline">
-            Claim Offer →
-          </Link>
-        </p>
+      <section className="px-4 pb-12">
+        <Container>
+          <div className="glass-panel flex flex-col items-center justify-between gap-4 rounded-3xl border border-purple-500/20 bg-purple-500/10 px-6 py-5 text-sm text-purple-100 shadow-[0_25px_60px_rgba(124,58,237,0.25)] md:flex-row md:text-base">
+            <div className="font-semibold uppercase tracking-[0.3em] text-purple-200">
+              Seasonal Offer
+            </div>
+            <p className="text-center md:text-left">
+              Save 10% on Christmas lighting installations when you reserve by October 15.
+            </p>
+            <Link
+              href="/contact"
+              className="rounded-2xl border border-purple-400/60 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-purple-100 transition hover:bg-purple-500/20"
+            >
+              Claim Offer →
+            </Link>
+          </div>
+        </Container>
       </section>
 
       <ServiceHighlights />
       <TrustSignals />
 
-      <section className="py-16">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.4fr,1fr] lg:px-8">
-          <div>
-            <p className="text-sm font-semibold text-indigo-600">Featured Results</p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+      <section className="py-20">
+        <Container className="grid gap-12 lg:grid-cols-[1.3fr,1fr]">
+          <div className="space-y-5">
+            <span className="stat-chip text-purple-200">Featured Results</span>
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">
               Before & after transformations that speak for themselves
             </h2>
-            <p className="mt-4 text-base text-slate-600">
+            <p className="text-sm text-slate-200/80 sm:text-base">
               From commercial storefronts to suburban driveways, our crew leverages professional
               equipment, eco-friendly detergents, and meticulous prep to deliver spotless results
               every time.
             </p>
-            <ul className="mt-6 space-y-3 text-sm text-slate-600">
+            <ul className="space-y-3 text-sm text-slate-200/70">
               <li>• Soft-wash systems to protect siding, roofing, and delicate surfaces.</li>
               <li>• Industrial-grade sealers and stains engineered for Midwest weather.</li>
               <li>• Custom holiday lighting designs with lifetime warranty components.</li>
             </ul>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {projectGallery.map((project) => (
-              <BeforeAfterSlider
-                key={project.label}
-                beforeSrc={project.before}
-                afterSrc={project.after}
-                label={project.label}
-              />
+              <div key={project.label} className="glass-panel p-4">
+                <BeforeAfterSlider
+                  beforeSrc={project.before}
+                  afterSrc={project.after}
+                  label={project.label}
+                />
+              </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <ProcessSteps />
