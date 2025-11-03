@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  --background: #07050f;
-  --foreground: #f3f4ff;
-  --surface-100: rgba(19, 15, 32, 0.7);
-  --surface-200: rgba(37, 32, 58, 0.8);
-  --surface-border: rgba(151, 126, 255, 0.15);
-  --purple-100: #a28bff;
-  --purple-200: #c29fff;
-  --purple-500: #7c3aed;
-  --gold-300: #f7c87c;
+  color-scheme: light;
+  --background: #f7f8fc;
+  --foreground: #161333;
+  --surface-100: #ffffff;
+  --surface-200: #f0edff;
+  --surface-border: rgba(111, 58, 255, 0.18);
+  --purple-50: #f6f1ff;
+  --purple-100: #e5dcff;
+  --purple-500: #6f3aff;
+  --purple-600: #5b2fe0;
+  --gray-500: #5b6073;
 }
 
 @layer base {
@@ -20,7 +21,7 @@
 
   body {
     min-height: 100vh;
-    background: radial-gradient(circle at top left, #1f173d 0%, #0b0718 55%, #05030c 100%);
+    background: radial-gradient(circle at top left, #ffffff 0%, #f3f4fc 35%, #eef0ff 100%);
     color: var(--foreground);
     font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
@@ -34,6 +35,7 @@
   h6 {
     font-family: var(--font-heading), "Montserrat", "Segoe UI", sans-serif;
     letter-spacing: -0.01em;
+    color: var(--foreground);
   }
 }
 
@@ -50,24 +52,38 @@
 
 @layer components {
   .glass-panel {
-    @apply rounded-3xl border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.35)];
+    @apply rounded-3xl border border-[var(--surface-border)] bg-[var(--surface-100)] shadow-[0_18px_45px_rgba(15,23,42,0.08)];
   }
 
   .card-gradient {
-    background: linear-gradient(180deg, rgba(124, 58, 237, 0.18) 0%, rgba(3, 7, 18, 0.95) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(111, 58, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    );
   }
 
   .accent-button {
-    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold transition;
-    background: linear-gradient(135deg, var(--purple-500), #4c1d95);
-    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.35);
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold text-white transition;
+    background: linear-gradient(135deg, var(--purple-500), var(--purple-600));
+    box-shadow: 0 12px 28px rgba(111, 58, 255, 0.3);
   }
 
   .secondary-button {
-    @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10;
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border px-5 py-3 text-sm font-semibold transition;
+    border-color: rgba(111, 58, 255, 0.35);
+    color: var(--purple-600);
+    background: white;
+  }
+
+  .secondary-button:hover {
+    background: var(--purple-50);
   }
 
   .stat-chip {
-    @apply inline-flex items-center rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em];
+    @apply inline-flex items-center rounded-2xl border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em];
+    border-color: rgba(111, 58, 255, 0.25);
+    background: var(--purple-50);
+    color: var(--purple-600);
   }
 }

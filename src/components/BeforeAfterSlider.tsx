@@ -15,7 +15,7 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSli
 
   return (
     <div className="space-y-3">
-      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/40">
+      <div className="relative overflow-hidden rounded-3xl border border-purple-500/12 bg-white">
         <Image
           src={afterSrc}
           alt={`${label} after cleaning`}
@@ -47,7 +47,7 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSli
           </div>
         </div>
       </div>
-      <label className="block text-sm font-semibold text-purple-100/80">
+      <label className="block text-sm font-semibold text-purple-700">
         Before / After: {label}
         <input
           type="range"
@@ -56,7 +56,7 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSli
           value={position}
           onChange={(event) => setPosition(Number(event.target.value))}
           className={clsx(
-            "mt-2 h-2 w-full cursor-pointer appearance-none rounded-full bg-white/10",
+            "mt-2 h-2 w-full cursor-pointer appearance-none rounded-full bg-purple-100",
             "accent-purple-500"
           )}
           aria-valuemin={0}

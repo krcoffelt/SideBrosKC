@@ -7,12 +7,12 @@ export function TrustSignals() {
         {trustSignals.map((signal) => (
           <div
             key={signal.label}
-            className="glass-panel flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 via-white/5 to-transparent p-6 text-white"
+            className="glass-panel flex h-full flex-col justify-between rounded-3xl bg-gradient-to-b from-white via-purple-50/60 to-white p-6 text-slate-700"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-200/80">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600">
               {signal.label}
             </p>
-            <p className="mt-4 text-sm text-slate-200/80">{signal.description}</p>
+            <p className="mt-4 text-sm text-slate-600">{signal.description}</p>
           </div>
         ))}
       </div>

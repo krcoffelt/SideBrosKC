@@ -10,13 +10,12 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-purple-500/10 bg-white/95 backdrop-blur-xl">
       <Container className="flex items-center justify-between py-4">
-        <Link href="/" className="flex flex-col">
-          <span className="text-lg font-semibold text-white">Side Bros KC LLC</span>
-          <span className="text-sm text-purple-200/80">{companyInfo.tagline}</span>
+        <Link href="/" className="text-xl font-semibold text-slate-900 whitespace-nowrap">
+          Side Bros KC
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium md:flex lg:gap-8">
           {navigation.map((item) => {
             const isActive =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
@@ -25,8 +24,8 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={clsx(
-                  "transition-colors hover:text-purple-200",
-                  isActive ? "text-purple-200" : "text-slate-300"
+                  "whitespace-nowrap transition-colors hover:text-purple-600",
+                  isActive ? "text-purple-600" : "text-slate-600"
                 )}
               >
                 {item.label}
@@ -60,10 +59,10 @@ function MobileMenu() {
   return (
     <div className="md:hidden">
       <details className="relative">
-        <summary className="flex cursor-pointer items-center rounded-full border border-white/15 px-3 py-2 text-sm font-semibold text-slate-100 shadow-sm transition hover:bg-white/10">
+        <summary className="flex cursor-pointer items-center rounded-full border border-purple-500/20 px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:bg-purple-50">
           Menu
         </summary>
-        <div className="absolute right-0 mt-2 w-60 rounded-xl border border-white/10 bg-black/80 p-2 shadow-xl backdrop-blur">
+        <div className="absolute right-0 mt-2 w-60 rounded-xl border border-purple-500/15 bg-white p-2 shadow-xl">
           <nav className="flex flex-col gap-1">
             {navigation.map((item) => {
               const isActive =
@@ -73,10 +72,10 @@ function MobileMenu() {
                   key={item.href}
                   href={item.href}
                   className={clsx(
-                    "rounded-lg px-3 py-2 text-sm font-semibold transition",
+                    "rounded-lg px-3 py-2 text-sm font-semibold transition whitespace-nowrap",
                     isActive
-                      ? "bg-purple-500/20 text-purple-200"
-                      : "text-slate-200 hover:bg-white/10"
+                      ? "bg-purple-50 text-purple-600"
+                      : "text-slate-700 hover:bg-purple-50"
                   )}
                 >
                   {item.label}
@@ -93,7 +92,7 @@ function MobileMenu() {
             </a>
             <Link
               href="/contact"
-              className="rounded-lg border border-purple-400/60 px-3 py-2 text-center text-sm font-semibold text-purple-200 transition hover:bg-purple-500/20"
+              className="rounded-lg border border-purple-400/60 px-3 py-2 text-center text-sm font-semibold text-purple-600 transition hover:bg-purple-50"
             >
               Quote Request
             </Link>
