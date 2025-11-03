@@ -16,7 +16,9 @@ export function Header() {
           Side Bros KC
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex lg:gap-8">
-          {navigation.map((item) => {
+          {navigation
+            .filter((item) => item.href !== "/")
+            .map((item) => {
             const isActive =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
@@ -64,7 +66,9 @@ function MobileMenu() {
         </summary>
         <div className="absolute right-0 mt-2 w-60 rounded-xl border border-purple-500/15 bg-white p-2 shadow-xl">
           <nav className="flex flex-col gap-1">
-            {navigation.map((item) => {
+            {navigation
+              .filter((item) => item.href !== "/")
+              .map((item) => {
               const isActive =
                 item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
               return (

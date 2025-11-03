@@ -16,9 +16,9 @@ export function ProcessSteps() {
           {processSteps.map((step, index) => (
             <div
               key={step.title}
-              className="glass-panel relative overflow-hidden rounded-3xl border border-purple-500/10 bg-white p-6 text-slate-700"
+              className="glass-panel relative rounded-3xl border border-purple-500/10 bg-white p-6 pt-10 text-slate-700"
             >
-              <span className="absolute -top-4 left-6 flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-100 text-base font-semibold text-purple-600 shadow-[0_12px_30px_rgba(111,58,255,0.25)]">
+              <span className="absolute left-6 top-0 flex -translate-y-1/2 items-center justify-center rounded-full bg-white px-3 py-1 text-sm font-semibold text-purple-600 shadow-[0_12px_30px_rgba(111,58,255,0.25)]">
                 {index + 1}
               </span>
               <h3 className="mt-6 text-lg font-semibold text-slate-900">{step.title}</h3>

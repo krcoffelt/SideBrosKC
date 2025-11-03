@@ -1,32 +1,25 @@
 import Link from "next/link";
 import { companyInfo } from "@/data/company";
 import { Container } from "@/components/Container";
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { ServiceHighlights } from "@/components/ServiceHighlights";
 import { TrustSignals } from "@/components/TrustSignals";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { Testimonials } from "@/components/Testimonials";
 import { CTASection } from "@/components/CTASection";
+import Image from "next/image";
 
-const heroBefore =
-  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80";
-const heroAfter =
-  "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=80";
-
-const projectGallery = [
+const portfolioImages = [
   {
-    label: "Commercial storefront pressure washing",
-    before:
-      "https://images.unsplash.com/photo-1505692794403-55b39ed0b28f?auto=format&fit=crop&w=1400&q=80",
-    after:
-      "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1400&q=80",
+    src: "https://images.unsplash.com/photo-1505692794403-55b39ed0b28f?auto=format&fit=crop&w=1200&q=80",
+    alt: "Freshly cleaned storefront with shining windows",
   },
   {
-    label: "Residential driveway restoration",
-    before:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-    after:
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=80",
+    src: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80",
+    alt: "Restored concrete driveway after staining",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1573575159775-0c5f4e2ce32f?auto=format&fit=crop&w=1200&q=80",
+    alt: "Holiday lighting installation on a home",
   },
 ];
 
@@ -84,8 +77,31 @@ export default function Home() {
             </div>
           </div>
           <div className="glass-panel relative overflow-hidden p-4">
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-purple-100/50 via-transparent to-white" />
-            <BeforeAfterSlider beforeSrc={heroBefore} afterSrc={heroAfter} label="Siding cleaning" />
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
+              <Image
+                src={portfolioImages[0].src}
+                alt={portfolioImages[0].alt}
+                width={800}
+                height={600}
+                className="h-full w-full rounded-2xl object-cover"
+              />
+              <div className="grid gap-3">
+                <Image
+                  src={portfolioImages[1].src}
+                  alt={portfolioImages[1].alt}
+                  width={800}
+                  height={400}
+                  className="h-full w-full rounded-2xl object-cover"
+                />
+                <Image
+                  src={portfolioImages[2].src}
+                  alt={portfolioImages[2].alt}
+                  width={800}
+                  height={400}
+                  className="h-full w-full rounded-2xl object-cover"
+                />
+              </div>
+            </div>
           </div>
         </Container>
       </section>
@@ -130,13 +146,15 @@ export default function Home() {
               <li>• Custom holiday lighting designs with lifetime warranty components.</li>
             </ul>
           </div>
-          <div className="space-y-6">
-            {projectGallery.map((project) => (
-              <div key={project.label} className="glass-panel p-4">
-                <BeforeAfterSlider
-                  beforeSrc={project.before}
-                  afterSrc={project.after}
-                  label={project.label}
+          <div className="grid gap-4 sm:grid-cols-2">
+            {portfolioImages.map((image) => (
+              <div key={image.src} className="glass-panel overflow-hidden rounded-3xl p-3">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={800}
+                  height={600}
+                  className="h-48 w-full rounded-2xl object-cover sm:h-56"
                 />
               </div>
             ))}
