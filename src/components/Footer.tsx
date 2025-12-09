@@ -47,6 +47,25 @@ export function Footer() {
               Privacy & Terms
             </Link>
           </div>
+          <div className="flex flex-wrap items-center gap-3 text-sm text-slate-600">
+            <span className="font-semibold text-slate-900">Follow:</span>
+            <a
+              href="https://www.facebook.com/profile.php?id=61558598529435"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-purple-500/20 px-3 py-1 transition hover:border-purple-500/40 hover:text-purple-700"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/sidebroskc/"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-purple-500/20 px-3 py-1 transition hover:border-purple-500/40 hover:text-purple-700"
+            >
+              Instagram
+            </a>
+          </div>
           <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} {companyInfo.name}. All rights reserved. {companyInfo.licensedInsured}.
           </p>
