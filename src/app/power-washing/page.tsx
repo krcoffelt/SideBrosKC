@@ -14,18 +14,14 @@ export const metadata: Metadata = {
 
 const galleryImages = [
   {
-    label: "Restaurant patio refresh",
-    before:
-      "https://images.unsplash.com/photo-1505692794403-55b39ed0b28f?auto=format&fit=crop&w=1400&q=80",
-    after:
-      "https://images.unsplash.com/photo-1529429617124-aee305f0c42f?auto=format&fit=crop&w=1400&q=80",
+    label: "Deck boards",
+    before: "/images/DirtyDeck.jpg",
+    after: "/images/CleanDeck.jpg",
   },
   {
-    label: "Roof soft wash",
-    before:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1400&q=80",
-    after:
-      "https://images.unsplash.com/photo-1505691723518-a56c1f71a1f7?auto=format&fit=crop&w=1400&q=80",
+    label: "Deck with grill area",
+    before: "/images/DirtyDeckGrill.jpg",
+    after: "/images/CleanDeckGrill.jpg",
   },
 ];
 
