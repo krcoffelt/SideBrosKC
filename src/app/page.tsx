@@ -113,13 +113,13 @@ export default function Home() {
               </div>
               <div className="grid gap-4 border-t border-purple-500/10 pt-6 text-sm text-slate-600 sm:grid-cols-3">
                 <div>
-                  <p className="text-3xl font-bold text-slate-900">350+</p>
+                  <p className="text-3xl font-bold text-slate-900">120+</p>
                   <p className="text-xs uppercase tracking-widest text-purple-600/80">
                     Surfaces Restored
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-slate-900">200+</p>
+                  <p className="text-3xl font-bold text-slate-900">80+</p>
                   <p className="text-xs uppercase tracking-widest text-purple-600/80">
                     Kansas City Clients
                   </p>
