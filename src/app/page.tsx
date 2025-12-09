@@ -42,6 +42,18 @@ const featuredTransformations = [
     alt: "Steps and walkway after cleaning",
     caption: "Steps and walkway brightened with a safe wash sequence.",
   },
+  {
+    badge: "Commercial Before",
+    src: "/images/SideBrosWebPic11.jpg",
+    alt: "Commercial facade before cleaning",
+    caption: "Stained bank exterior prior to soft washing.",
+  },
+  {
+    badge: "Commercial After",
+    src: "/images/SideBrosWebPic12.jpg",
+    alt: "Commercial facade after cleaning",
+    caption: "Facade restored to a uniform, clean finish post-wash.",
+  },
 ];
 
 export default function Home() {

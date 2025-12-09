@@ -159,6 +159,48 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      <section className="bg-gradient-to-br from-white via-purple-50/70 to-white py-16">
+        <Container className="space-y-10">
+          <div className="space-y-3 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600">
+              Commercial Clean
+            </p>
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Bank facade refresh</h2>
+            <p className="text-base text-slate-600">
+              Restored a stained commercial facade to a clean, uniform finish without disrupting business.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                <span>Before</span>
+                <span className="text-[10px] text-purple-500">SideBrosWebPic11</span>
+              </div>
+              <Image
+                src="/images/SideBrosWebPic11.jpg"
+                alt="Commercial facade before cleaning"
+                width={1200}
+                height={800}
+                className="h-[360px] w-full object-cover sm:h-[460px]"
+              />
+            </figure>
+            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                <span>After</span>
+                <span className="text-[10px] text-purple-500">SideBrosWebPic12</span>
+              </div>
+              <Image
+                src="/images/SideBrosWebPic12.jpg"
+                alt="Commercial facade after cleaning"
+                width={1200}
+                height={800}
+                className="h-[360px] w-full object-cover sm:h-[460px]"
+              />
+            </figure>
+          </div>
+        </Container>
+      </section>
+
       <section className="bg-gradient-to-br from-white via-purple-50/60 to-white py-16">
         <Container className="space-y-8">
           <div className="space-y-3 text-center">
