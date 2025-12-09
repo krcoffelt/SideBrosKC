@@ -33,6 +33,39 @@ const values = [
   },
 ];
 
+const walkwaySequence = [
+  {
+    src: "/images/SideBrosWebPic7.webp",
+    label: "Step 1",
+    fileId: "SideBrosWebPic7",
+    alt: "Walkway prep before cleaning",
+  },
+  {
+    src: "/images/SideBrosWebPic4.webp",
+    label: "Step 2",
+    fileId: "SideBrosWebPic4",
+    alt: "Walkway during power washing",
+  },
+  {
+    src: "/images/SideBrosWebPic6.webp",
+    label: "Step 3",
+    fileId: "SideBrosWebPic6",
+    alt: "Walkway rinse in progress",
+  },
+  {
+    src: "/images/SideBrosWebPic8.webp",
+    label: "Step 4",
+    fileId: "SideBrosWebPic8",
+    alt: "Walkway drying after wash",
+  },
+  {
+    src: "/images/SideBrosWebPic3.webp",
+    label: "Step 5",
+    fileId: "SideBrosWebPic3",
+    alt: "Clean walkway and steps",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -79,6 +112,83 @@ export default function AboutPage() {
               height={700}
               className="h-full w-full object-cover"
             />
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white py-16">
+        <Container className="space-y-10">
+          <div className="space-y-3 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600">
+              Results
+            </p>
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Driveway revival</h2>
+            <p className="text-base text-slate-600">
+              A recent power-washing project transformed this driveway from grimy to clean, showing
+              the kind of curb appeal boost we deliver.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                <span>Before</span>
+                <span className="text-[10px] text-purple-500">SideBrosWebPic5</span>
+              </div>
+              <Image
+                src="/images/SideBrosWebPic5.webp"
+                alt="Driveway before cleaning"
+                width={1000}
+                height={1500}
+                className="h-[420px] w-full object-cover sm:h-[520px]"
+              />
+            </figure>
+            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                <span>After</span>
+                <span className="text-[10px] text-purple-500">SideBrosWebPic1</span>
+              </div>
+              <Image
+                src="/images/SideBrosWebPic1.webp"
+                alt="Driveway after cleaning"
+                width={1000}
+                height={1500}
+                className="h-[420px] w-full object-cover sm:h-[520px]"
+              />
+            </figure>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-gradient-to-br from-white via-purple-50/60 to-white py-16">
+        <Container className="space-y-8">
+          <div className="space-y-3 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600">
+              Steps & Walkway
+            </p>
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Progress walkthrough</h2>
+            <p className="text-base text-slate-600">
+              A five-shot look at the steps and walkway cleanup — from prep to a bright, even finish.
+            </p>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {walkwaySequence.map((photo, index) => (
+              <figure
+                key={photo.src}
+                className="overflow-hidden rounded-3xl border border-purple-500/15 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.08)]"
+              >
+                <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                  <span>{photo.label}</span>
+                  <span className="text-[10px] text-purple-500">{photo.fileId}</span>
+                </div>
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={1000}
+                  height={1400}
+                  className="h-[360px] w-full object-cover sm:h-[420px]"
+                />
+              </figure>
+            ))}
           </div>
         </Container>
       </section>
