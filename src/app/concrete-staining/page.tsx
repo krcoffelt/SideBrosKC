@@ -44,8 +44,8 @@ export default function ConcreteStainingPage() {
           </div>
           <div className="relative overflow-hidden rounded-3xl border border-purple-400/25 shadow-[0_30px_70px_rgba(111,58,255,0.18)]">
             <Image
-              src="https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=1400&q=80"
-              alt="Freshly stained concrete patio with seating area"
+              src="/images/2025-04-08.webp"
+              alt="Freshly stained concrete with crisp edging"
               width={1000}
               height={700}
               className="h-full w-full object-cover"
@@ -87,8 +87,8 @@ export default function ConcreteStainingPage() {
           </div>
           <div className="relative overflow-hidden rounded-3xl border border-purple-500/12 shadow-[0_25px_75px_rgba(15,23,42,0.12)]">
             <Image
-              src="https://images.unsplash.com/photo-1616628188505-4044404f2849?auto=format&fit=crop&w=1000&q=80"
-              alt="Stained concrete walkway leading to a home entrance"
+              src="/images/SideBrosWebPic8.webp"
+              alt="Clean concrete patio after staining and washdown"
               width={900}
               height={1200}
               className="h-full w-full object-cover"
