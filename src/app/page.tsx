@@ -54,6 +54,30 @@ const featuredTransformations = [
     alt: "Commercial facade after cleaning",
     caption: "Facade restored to a uniform, clean finish post-wash.",
   },
+  {
+    badge: "Staining",
+    src: "/images/2025-04-08.webp",
+    alt: "Concrete staining project with a clean finish",
+    caption: "Concrete staining with crisp lines and uniform color.",
+  },
+  {
+    badge: "Patio Before",
+    src: "/images/2025-04-08%20(2).webp",
+    alt: "Backyard patio before cleaning",
+    caption: "Backyard patio prior to wash and refresh.",
+  },
+  {
+    badge: "Patio After",
+    src: "/images/2025-04-08%20(3).webp",
+    alt: "Backyard patio after cleaning",
+    caption: "Same patio after a thorough cleaning and rinse.",
+  },
+  {
+    badge: "Wall Wash",
+    src: "/images/2025-04-08%20(1).webp",
+    alt: "Power washing a concrete retaining wall",
+    caption: "Retaining wall cleaned with controlled pressure for even results.",
+  },
 ];
 
 export default function Home() {

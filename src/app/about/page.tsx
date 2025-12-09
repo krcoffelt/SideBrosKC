@@ -235,6 +235,76 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      <section className="bg-white py-16">
+        <Container className="space-y-10">
+          <div className="space-y-3 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600">
+              Concrete & Patio
+            </p>
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+              Staining and patio refresh highlights
+            </h2>
+            <p className="text-base text-slate-600">
+              From crisp staining to deep-cleaned patios and vertical walls, here’s how we restore concrete.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                <span>Staining</span>
+                <span className="text-[10px] text-purple-500">2025-04-08</span>
+              </div>
+              <Image
+                src="/images/2025-04-08.webp"
+                alt="Concrete staining project with a clean finish"
+                width={1200}
+                height={800}
+                className="h-[300px] w-full object-cover sm:h-[360px]"
+              />
+            </figure>
+            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                <span>Patio Before</span>
+                <span className="text-[10px] text-purple-500">2025-04-08 (2)</span>
+              </div>
+              <Image
+                src="/images/2025-04-08%20(2).webp"
+                alt="Backyard patio before cleaning"
+                width={1200}
+                height={800}
+                className="h-[300px] w-full object-cover sm:h-[360px]"
+              />
+            </figure>
+            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                <span>Patio After</span>
+                <span className="text-[10px] text-purple-500">2025-04-08 (3)</span>
+              </div>
+              <Image
+                src="/images/2025-04-08%20(3).webp"
+                alt="Backyard patio after cleaning"
+                width={1200}
+                height={800}
+                className="h-[300px] w-full object-cover sm:h-[360px]"
+              />
+            </figure>
+            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)] sm:col-span-2 lg:col-span-1">
+              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                <span>Wall Wash</span>
+                <span className="text-[10px] text-purple-500">2025-04-08 (1)</span>
+              </div>
+              <Image
+                src="/images/2025-04-08%20(1).webp"
+                alt="Power washing a concrete retaining wall"
+                width={1200}
+                height={800}
+                className="h-[300px] w-full object-cover sm:h-[360px]"
+              />
+            </figure>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-20">
         <Container className="grid gap-10 lg:grid-cols-[1.2fr,1fr]">
           <div className="space-y-5">
