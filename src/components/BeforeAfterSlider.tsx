@@ -12,10 +12,29 @@ type BeforeAfterSliderProps = {
 
 export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSliderProps) {
   const [position, setPosition] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const updatePositionFromEvent = (event: React.PointerEvent<HTMLDivElement>) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX - bounds.left;
+    const clamped = Math.min(Math.max((x / bounds.width) * 100, 0), 100);
+    setPosition(clamped);
+  };
 
   return (
     <div className="space-y-3">
-      <div className="relative overflow-hidden rounded-3xl border border-purple-500/12 bg-white">
+      <div
+        className="relative overflow-hidden rounded-3xl border border-purple-500/12 bg-white"
+        onPointerDown={(event) => {
+          setIsDragging(true);
+          updatePositionFromEvent(event);
+        }}
+        onPointerMove={(event) => {
+          if (isDragging) updatePositionFromEvent(event);
+        }}
+        onPointerUp={() => setIsDragging(false)}
+        onPointerLeave={() => setIsDragging(false)}
+      >
         <Image
           src={afterSrc}
           alt={`${label} after cleaning`}
@@ -38,11 +57,11 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSli
           />
         </div>
         <div
-          className="pointer-events-none absolute inset-y-0 left-[calc(var(--pos)*1%)] flex -translate-x-1/2 items-center"
+          className="absolute inset-y-0 left-[calc(var(--pos)*1%)] flex -translate-x-1/2 items-center"
           style={{ "--pos": position } as CSSProperties}
           aria-hidden="true"
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow">
+          <div className="flex h-12 w-12 cursor-pointer touch-none items-center justify-center rounded-full bg-white/90 shadow">
             <span className="text-xs font-semibold text-slate-600">Drag</span>
           </div>
         </div>
