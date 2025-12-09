@@ -43,6 +43,9 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
+            <Link href="/privacy" className="text-slate-600 transition hover:text-purple-600">
+              Privacy & Terms
+            </Link>
           </div>
           <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} {companyInfo.name}. All rights reserved. {companyInfo.licensedInsured}.
