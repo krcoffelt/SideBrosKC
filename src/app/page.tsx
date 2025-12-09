@@ -8,18 +8,39 @@ import { Testimonials } from "@/components/Testimonials";
 import { CTASection } from "@/components/CTASection";
 import Image from "next/image";
 
-const portfolioImages = [
+const heroImages = [
   {
-    src: "https://images.unsplash.com/photo-1505692794403-55b39ed0b28f?auto=format&fit=crop&w=1200&q=80",
-    alt: "Freshly cleaned storefront with shining windows",
+    src: "/images/SideBrosWebPic5.webp",
+    alt: "Driveway before cleaning",
   },
   {
-    src: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80",
-    alt: "Restored concrete driveway after staining",
+    src: "/images/SideBrosWebPic1.webp",
+    alt: "Driveway after cleaning",
   },
   {
-    src: "https://images.unsplash.com/photo-1573575159775-0c5f4e2ce32f?auto=format&fit=crop&w=1200&q=80",
-    alt: "Holiday lighting installation on a home",
+    src: "/images/SideBrosWebPic3.webp",
+    alt: "Steps and walkway after cleaning",
+  },
+];
+
+const featuredTransformations = [
+  {
+    badge: "Before",
+    src: "/images/SideBrosWebPic5.webp",
+    alt: "Driveway before cleaning",
+    caption: "Driveway prep with detergents activating on the surface.",
+  },
+  {
+    badge: "After",
+    src: "/images/SideBrosWebPic1.webp",
+    alt: "Driveway after cleaning",
+    caption: "Clean, even finish after a full power wash and rinse.",
+  },
+  {
+    badge: "Walkway",
+    src: "/images/SideBrosWebPic3.webp",
+    alt: "Steps and walkway after cleaning",
+    caption: "Steps and walkway brightened with a safe wash sequence.",
   },
 ];
 
@@ -79,23 +100,23 @@ export default function Home() {
           <div className="glass-panel relative overflow-hidden p-4">
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
               <Image
-                src={portfolioImages[0].src}
-                alt={portfolioImages[0].alt}
+                src={heroImages[0].src}
+                alt={heroImages[0].alt}
                 width={800}
                 height={600}
                 className="h-full w-full rounded-2xl object-cover"
               />
               <div className="grid gap-3">
                 <Image
-                  src={portfolioImages[1].src}
-                  alt={portfolioImages[1].alt}
+                  src={heroImages[1].src}
+                  alt={heroImages[1].alt}
                   width={800}
                   height={400}
                   className="h-full w-full rounded-2xl object-cover"
                 />
                 <Image
-                  src={portfolioImages[2].src}
-                  alt={portfolioImages[2].alt}
+                  src={heroImages[2].src}
+                  alt={heroImages[2].alt}
                   width={800}
                   height={400}
                   className="h-full w-full rounded-2xl object-cover"
@@ -147,8 +168,11 @@ export default function Home() {
             </ul>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {portfolioImages.map((image) => (
-              <div key={image.src} className="glass-panel overflow-hidden rounded-3xl p-3">
+            {featuredTransformations.map((image) => (
+              <figure key={image.src} className="glass-panel overflow-hidden rounded-3xl p-3">
+                <div className="mb-2 inline-flex items-center rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                  {image.badge}
+                </div>
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -156,7 +180,8 @@ export default function Home() {
                   height={600}
                   className="h-48 w-full rounded-2xl object-cover sm:h-56"
                 />
-              </div>
+                <figcaption className="mt-2 text-sm text-slate-600">{image.caption}</figcaption>
+              </figure>
             ))}
           </div>
         </Container>
