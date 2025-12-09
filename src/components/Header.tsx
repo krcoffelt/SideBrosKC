@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation, companyInfo } from "@/data/company";
@@ -12,8 +13,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-purple-500/10 bg-white/95 backdrop-blur-xl">
       <Container className="flex items-center justify-between py-4">
-        <Link href="/" className="text-xl font-semibold text-slate-900 whitespace-nowrap">
-          Side Bros KC
+        <Link href="/" className="flex items-center gap-2 text-xl font-semibold text-slate-900 whitespace-nowrap">
+          <Image
+            src="/images/SideBrosKCLogoIcon.png"
+            alt="Side Bros KC logo icon"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+            priority
+          />
+          <span>Side Bros KC</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex lg:gap-8">
           {navigation
