@@ -27,6 +27,21 @@ export const metadata: Metadata = {
     title: `${companyInfo.name} | ${companyInfo.tagline}`,
     description:
       "Kansas City’s trusted team for exterior cleaning, concrete restoration, and holiday lighting.",
+    images: [
+      {
+        url: "/images/SideBrosKCLogoIcon.png",
+        width: 512,
+        height: 512,
+        alt: "Side Bros KC logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${companyInfo.name} | ${companyInfo.tagline}`,
+    description:
+      "Kansas City’s trusted team for exterior cleaning, concrete restoration, and holiday lighting.",
+    images: ["/images/SideBrosKCLogoIcon.png"],
   },
 };
 
