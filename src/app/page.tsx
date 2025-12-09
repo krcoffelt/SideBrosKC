@@ -134,13 +134,13 @@ export default function Home() {
             </div>
           </div>
           <div className="glass-panel relative overflow-hidden p-4">
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Image
                 src={heroImages[0].src}
                 alt={heroImages[0].alt}
                 width={800}
                 height={600}
-                className="h-full w-full rounded-2xl object-cover"
+                className="h-64 w-full rounded-2xl object-cover sm:h-full"
               />
               <div className="grid gap-3">
                 <Image
@@ -148,14 +148,14 @@ export default function Home() {
                   alt={heroImages[1].alt}
                   width={800}
                   height={400}
-                  className="h-full w-full rounded-2xl object-cover"
+                  className="h-48 w-full rounded-2xl object-cover sm:h-full"
                 />
                 <Image
                   src={heroImages[2].src}
                   alt={heroImages[2].alt}
                   width={800}
                   height={400}
-                  className="h-full w-full rounded-2xl object-cover"
+                  className="h-48 w-full rounded-2xl object-cover sm:h-full"
                 />
               </div>
             </div>
