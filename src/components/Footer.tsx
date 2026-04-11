@@ -69,6 +69,17 @@ export function Footer() {
           <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} {companyInfo.name}. All rights reserved. {companyInfo.licensedInsured}.
           </p>
+          <p className="text-xs text-slate-500">
+            Website by{" "}
+            <a
+              href="https://hometownkc.agency"
+              target="_blank"
+              rel="noreferrer"
+              className="text-purple-600 transition hover:text-purple-700"
+            >
+              Hometown Marketing Agency
+            </a>
+          </p>
         </div>
         <div className="overflow-hidden rounded-2xl border border-purple-500/15 shadow-lg">
           <iframe
