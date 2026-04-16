@@ -1,12 +1,15 @@
 import { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { companyInfo } from "@/data/company";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: `Privacy Policy & Terms | ${companyInfo.name}`,
   description:
     "Understand how Side Bros KC LLC handles your information, website data, and service terms for exterior cleaning projects.",
-};
+  path: "/privacy",
+  image: "/images/SideBrosWebPic12.jpg",
+});
 
 export default function PrivacyPage() {
   return (

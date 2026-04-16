@@ -5,12 +5,18 @@ import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { Container } from "@/components/Container";
 import { CTASection } from "@/components/CTASection";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import { StructuredData } from "@/components/StructuredData";
+import { buildFAQSchema, buildPageMetadata, buildServiceSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const pageDescription =
+  "Residential and commercial power washing in Kansas City. Remove dirt, mildew, and buildup safely with Side Bros KC LLC.";
+
+export const metadata: Metadata = buildPageMetadata({
   title: `Professional Power Washing | ${companyInfo.name}`,
-  description:
-    "Residential and commercial power washing in Kansas City. Remove dirt, mildew, and buildup safely with Side Bros KC LLC.",
-};
+  description: pageDescription,
+  path: "/power-washing",
+  image: "/images/SideBrosWebPic12.jpg",
+});
 
 const galleryImages = [
   {
@@ -28,6 +34,18 @@ const galleryImages = [
 export default function PowerWashingPage() {
   return (
     <>
+      <StructuredData
+        id="power-washing-schema"
+        data={[
+          buildServiceSchema({
+            name: "Power Washing",
+            description: pageDescription,
+            path: "/power-washing",
+            image: "/images/SideBrosWebPic12.jpg",
+          }),
+          buildFAQSchema(powerWashingFaqs),
+        ]}
+      />
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/60 to-white py-24 text-slate-900">
         <div className="absolute inset-0">
           <div className="absolute left-1/2 top-10 h-56 w-56 -translate-x-1/2 rounded-full bg-purple-200/40 blur-3xl" />
@@ -55,10 +73,11 @@ export default function PowerWashingPage() {
           </div>
           <div className="relative overflow-hidden rounded-3xl border border-purple-400/25 shadow-[0_30px_70px_rgba(111,58,255,0.18)]">
             <Image
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
-              alt="Side Bros KC performing power washing on a building facade"
-              width={900}
-              height={600}
+              src="/images/SideBrosWebPic12.jpg"
+              alt="Commercial building exterior after Side Bros KC power washing"
+              width={1200}
+              height={800}
+              sizes="(min-width: 1024px) 38vw, 100vw"
               className="h-full w-full object-cover"
               priority
             />

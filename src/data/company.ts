@@ -1,13 +1,32 @@
 export const companyInfo = {
   name: "Side Bros KC LLC",
   tagline: "The Bros Who Bring the Shine to KC.",
+  siteUrl: "https://www.sidebroskc.com",
   phone: "(913) 286-9119",
   phoneHref: "tel:19132869119",
   email: "Sidebroskc@gmail.com",
   address: "1545 West Park Street, Olathe, KS 66061",
   founded: "2022",
   licensedInsured: "Licensed & Insured",
+  priceRange: "$$",
   serviceAreas: ["Kansas City Metro Area", "Olathe", "North Kansas"],
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61558598529435",
+    "https://www.instagram.com/sidebroskc/",
+  ],
+  geo: {
+    latitude: 38.88851747172443,
+    longitude: -94.82957312396193,
+  },
+  openingHours: [
+    { dayOfWeek: "Monday", opens: "08:00", closes: "18:00" },
+    { dayOfWeek: "Tuesday", opens: "08:00", closes: "18:00" },
+    { dayOfWeek: "Wednesday", opens: "08:00", closes: "18:00" },
+    { dayOfWeek: "Thursday", opens: "08:00", closes: "18:00" },
+    { dayOfWeek: "Friday", opens: "08:00", closes: "18:00" },
+    { dayOfWeek: "Saturday", opens: "08:00", closes: "18:00" },
+  ],
+  mapUrl: "https://maps.google.com/?q=1545+West+Park+Street,+Olathe,+KS+66061",
   googleMapsEmbedSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.224328060217!2d-94.82957312396193!3d38.88851747172443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0815a5ffc59e9%3A0x1da5c4f8ad788845!2s1545%20W%20Park%20St%2C%20Olathe%2C%20KS%2066061!5e0!3m2!1sen!2sus!4v1737588000000!5m2!1sen!2sus",
 };

@@ -3,12 +3,15 @@ import { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { CTASection } from "@/components/CTASection";
 import { companyInfo } from "@/data/company";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: `About ${companyInfo.name}`,
   description:
     "Learn about Side Bros KC LLC — licensed and insured exterior cleaning experts serving the Kansas City metro with power washing, concrete staining, and holiday lighting.",
-};
+  path: "/about",
+  image: "/images/SideBrosWebPic12.jpg",
+});
 
 const values = [
   {
@@ -106,10 +109,11 @@ export default function AboutPage() {
           </div>
           <div className="relative overflow-hidden rounded-3xl border border-purple-400/20 shadow-[0_30px_70px_rgba(111,58,255,0.18)]">
             <Image
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80"
-              alt="Side Bros KC team on-site"
+              src="/images/SideBrosWebPic12.jpg"
+              alt="Commercial exterior restored by Side Bros KC"
               width={1000}
-              height={700}
+              height={800}
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className="h-full w-full object-cover"
             />
           </div>
@@ -213,7 +217,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {walkwaySequence.map((photo, index) => (
+            {walkwaySequence.map((photo) => (
               <figure
                 key={photo.src}
                 className="overflow-hidden rounded-3xl border border-purple-500/15 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.08)]"

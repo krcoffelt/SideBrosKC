@@ -40,8 +40,8 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSli
           alt={`${label} after cleaning`}
           width={1200}
           height={800}
+          sizes="(min-width: 1024px) 28vw, 100vw"
           className="h-full w-full object-cover"
-          priority
         />
         <div
           className="absolute inset-0 overflow-hidden"
@@ -53,6 +53,7 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSli
             alt=""
             width={1200}
             height={800}
+            sizes="(min-width: 1024px) 28vw, 100vw"
             className="h-full w-full object-cover"
           />
         </div>

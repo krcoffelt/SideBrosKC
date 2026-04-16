@@ -4,16 +4,34 @@ import { companyInfo, concreteHighlights, concreteFaqs } from "@/data/company";
 import { Container } from "@/components/Container";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
+import { StructuredData } from "@/components/StructuredData";
+import { buildFAQSchema, buildPageMetadata, buildServiceSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const pageDescription =
+  "Transform driveways, patios, and walkways with custom concrete staining, sealing, and slip-resistant finishes from Side Bros KC LLC.";
+
+export const metadata: Metadata = buildPageMetadata({
   title: `Concrete Staining & Sealing | ${companyInfo.name}`,
-  description:
-    "Transform driveways, patios, and walkways with custom concrete staining, sealing, and slip-resistant finishes from Side Bros KC LLC.",
-};
+  description: pageDescription,
+  path: "/concrete-staining",
+  image: "/images/2025-04-08.webp",
+});
 
 export default function ConcreteStainingPage() {
   return (
     <>
+      <StructuredData
+        id="concrete-staining-schema"
+        data={[
+          buildServiceSchema({
+            name: "Concrete Staining and Sealing",
+            description: pageDescription,
+            path: "/concrete-staining",
+            image: "/images/2025-04-08.webp",
+          }),
+          buildFAQSchema(concreteFaqs),
+        ]}
+      />
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/70 to-white py-24 text-slate-900">
         <div className="absolute inset-0">
           <div className="absolute left-10 top-10 h-64 w-64 rounded-full bg-purple-200/45 blur-3xl" />
@@ -48,6 +66,7 @@ export default function ConcreteStainingPage() {
               alt="Freshly stained concrete with crisp edging"
               width={1000}
               height={700}
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className="h-full w-full object-cover"
               priority
             />
@@ -91,6 +110,7 @@ export default function ConcreteStainingPage() {
               alt="Clean concrete patio after staining and washdown"
               width={900}
               height={1200}
+              sizes="(min-width: 1024px) 36vw, 100vw"
               className="h-full w-full object-cover"
             />
           </div>

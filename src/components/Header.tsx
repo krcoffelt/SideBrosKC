@@ -19,6 +19,7 @@ export function Header() {
             alt="Side Bros KC logo icon"
             width={32}
             height={32}
+            sizes="32px"
             className="h-8 w-8"
             priority
           />
@@ -48,12 +49,16 @@ export function Header() {
           <a
             href={companyInfo.phoneHref}
             className="accent-button hover:-translate-y-0.5"
+            data-analytics-event="header_phone_click"
+            data-analytics-label="Header call button"
           >
             Call {companyInfo.phone}
           </a>
           <Link
             href="/contact"
             className="secondary-button"
+            data-analytics-event="header_quote_click"
+            data-analytics-label="Header quote button"
           >
             Get a Free Quote
           </Link>
@@ -100,12 +105,16 @@ function MobileMenu() {
             <a
               href={companyInfo.phoneHref}
               className="rounded-lg bg-purple-600 px-3 py-2 text-center text-sm font-semibold text-white transition hover:bg-purple-700"
+              data-analytics-event="mobile_menu_phone_click"
+              data-analytics-label="Mobile menu call button"
             >
               Call {companyInfo.phone}
             </a>
             <Link
               href="/contact"
               className="rounded-lg border border-purple-400/60 px-3 py-2 text-center text-sm font-semibold text-purple-600 transition hover:bg-purple-50"
+              data-analytics-event="mobile_menu_quote_click"
+              data-analytics-label="Mobile menu quote button"
             >
               Quote Request
             </Link>

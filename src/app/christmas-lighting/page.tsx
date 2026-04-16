@@ -4,13 +4,19 @@ import { companyInfo, lightingFeatures, lightingFaqs } from "@/data/company";
 import { Container } from "@/components/Container";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
+import { StructuredData } from "@/components/StructuredData";
 import { CheckIcon } from "@/components/icons";
+import { buildFAQSchema, buildPageMetadata, buildServiceSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const pageDescription =
+  "Design, installation, maintenance, and takedown of custom Christmas lighting across the Kansas City metro with lifetime warranty materials.";
+
+export const metadata: Metadata = buildPageMetadata({
   title: `Custom Christmas Lighting | ${companyInfo.name}`,
-  description:
-    "Design, installation, maintenance, and takedown of custom Christmas lighting across the Kansas City metro with lifetime warranty materials.",
-};
+  description: pageDescription,
+  path: "/christmas-lighting",
+  image: "/images/SideBrosWebPic1.webp",
+});
 
 const packageOptions = [
   {
@@ -36,6 +42,18 @@ const packageOptions = [
 export default function ChristmasLightingPage() {
   return (
     <>
+      <StructuredData
+        id="christmas-lighting-schema"
+        data={[
+          buildServiceSchema({
+            name: "Custom Christmas Lighting",
+            description: pageDescription,
+            path: "/christmas-lighting",
+            image: "/images/SideBrosWebPic1.webp",
+          }),
+          buildFAQSchema(lightingFaqs),
+        ]}
+      />
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/60 to-white py-24 text-slate-900">
         <div className="absolute inset-0">
           <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-purple-200/45 blur-3xl" />
@@ -71,6 +89,7 @@ export default function ChristmasLightingPage() {
               alt="Custom holiday lighting on a home"
               width={1000}
               height={700}
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className="h-full w-full object-cover"
               priority
             />

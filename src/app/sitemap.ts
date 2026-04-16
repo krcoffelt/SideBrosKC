@@ -1,0 +1,23 @@
+import type { MetadataRoute } from "next";
+import { companyInfo } from "@/data/company";
+
+const routes = [
+  { path: "/", priority: 1, changeFrequency: "weekly" as const },
+  { path: "/power-washing", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/concrete-staining", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/christmas-lighting", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/about", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "/privacy", priority: 0.4, changeFrequency: "yearly" as const },
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date();
+
+  return routes.map((route) => ({
+    url: route.path === "/" ? companyInfo.siteUrl : `${companyInfo.siteUrl}${route.path}`,
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
+}

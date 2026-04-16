@@ -29,6 +29,8 @@ export function CTASection({
               <a
                 href={companyInfo.phoneHref}
                 className="accent-button hover:opacity-90"
+                data-analytics-event="cta_phone_click"
+                data-analytics-label={primaryLabel}
               >
                 <PhoneIcon className="h-4 w-4" />
                 {primaryLabel}: {companyInfo.phone}
@@ -36,6 +38,8 @@ export function CTASection({
               <Link
                 href={secondaryHref}
                 className="secondary-button"
+                data-analytics-event="cta_quote_click"
+                data-analytics-label={secondaryLabel}
               >
                 {secondaryLabel}
               </Link>

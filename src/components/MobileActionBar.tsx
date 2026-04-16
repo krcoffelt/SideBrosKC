@@ -8,12 +8,16 @@ export function MobileActionBar() {
         <a
           href={companyInfo.phoneHref}
           className="flex-1 rounded-full bg-purple-600 px-4 py-2 text-center text-white transition hover:bg-purple-700"
+          data-analytics-event="mobile_bar_phone_click"
+          data-analytics-label="Mobile action bar call"
         >
           Call Now
         </a>
         <Link
           href="/contact"
           className="flex-1 rounded-full border border-purple-500/40 px-4 py-2 text-center text-purple-600 transition hover:bg-purple-50"
+          data-analytics-event="mobile_bar_quote_click"
+          data-analytics-label="Mobile action bar quote"
         >
           Free Quote
         </Link>

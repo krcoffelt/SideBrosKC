@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { companyInfo } from "@/data/company";
 import { Container } from "@/components/Container";
 import { ServiceHighlights } from "@/components/ServiceHighlights";
@@ -6,7 +7,16 @@ import { TrustSignals } from "@/components/TrustSignals";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { Testimonials } from "@/components/Testimonials";
 import { CTASection } from "@/components/CTASection";
+import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: `${companyInfo.name} | ${companyInfo.tagline}`,
+  description:
+    "Side Bros KC LLC delivers professional power washing, concrete staining, and custom Christmas lighting across the Kansas City metro. Get your free quote today.",
+  path: "/",
+  image: "/images/SideBrosWebPic12.jpg",
+});
 
 const heroImages = [
   {
@@ -104,7 +114,12 @@ export default function Home() {
                 details that make your property stand out.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Link href="/contact" className="accent-button text-white hover:opacity-90">
+                <Link
+                  href="/contact"
+                  className="accent-button text-white hover:opacity-90"
+                  data-analytics-event="home_hero_quote_click"
+                  data-analytics-label="Home hero quote"
+                >
                   Get a Free Quote
                 </Link>
                 <a href={companyInfo.phoneHref} className="secondary-button">
@@ -140,7 +155,9 @@ export default function Home() {
                 alt={heroImages[0].alt}
                 width={800}
                 height={600}
+                sizes="(min-width: 1024px) 32vw, 100vw"
                 className="h-64 w-full rounded-2xl object-cover sm:h-full"
+                priority
               />
               <div className="grid gap-3">
                 <Image
@@ -148,6 +165,7 @@ export default function Home() {
                   alt={heroImages[1].alt}
                   width={800}
                   height={400}
+                  sizes="(min-width: 640px) 24vw, 100vw"
                   className="h-48 w-full rounded-2xl object-cover sm:h-full"
                 />
                 <Image
@@ -155,6 +173,7 @@ export default function Home() {
                   alt={heroImages[2].alt}
                   width={800}
                   height={400}
+                  sizes="(min-width: 640px) 24vw, 100vw"
                   className="h-48 w-full rounded-2xl object-cover sm:h-full"
                 />
               </div>
@@ -175,6 +194,8 @@ export default function Home() {
             <Link
               href="/contact"
               className="rounded-2xl border border-purple-400/60 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-purple-600 transition hover:bg-purple-100"
+              data-analytics-event="seasonal_offer_click"
+              data-analytics-label="Seasonal offer claim"
             >
               Claim Offer →
             </Link>
@@ -214,6 +235,7 @@ export default function Home() {
                   alt={image.alt}
                   width={800}
                   height={600}
+                  sizes="(min-width: 640px) 24vw, 100vw"
                   className="h-48 w-full rounded-2xl object-cover sm:h-56"
                 />
                 <figcaption className="mt-2 text-sm text-slate-600">{image.caption}</figcaption>
