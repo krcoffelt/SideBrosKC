@@ -1,3 +1,194 @@
+export type LocationPage = {
+  slug: string;
+  name: string;
+  heading: string;
+  metaDescription: string;
+  propertyMix: string;
+  commonNeeds: string;
+  nearby: string[];
+  image: string;
+};
+
+export const locationPages: LocationPage[] = [
+  {
+    slug: "kansas-city-metro",
+    name: "Kansas City Metro",
+    heading: "Exterior cleaning across the Kansas City metro",
+    metaDescription:
+      "Power washing, gutter cleaning, window cleaning, fleet washing, concrete staining, and Christmas lighting across the Kansas City metro.",
+    propertyMix:
+      "homes, storefronts, office properties, and service fleets spread across both Kansas and Missouri",
+    commonNeeds:
+      "seasonal grime, heavy pollen, hard-water staining, and high-visibility storefront upkeep",
+    nearby: ["Olathe", "Overland Park", "Kansas City, MO"],
+    image: "/images/SideBrosWebPic12.jpg",
+  },
+  {
+    slug: "olathe-ks",
+    name: "Olathe",
+    heading: "Power washing and exterior cleaning in Olathe, KS",
+    metaDescription:
+      "Professional power washing, gutter cleaning, window cleaning, concrete staining, fleet washing, and Christmas lighting in Olathe, KS.",
+    propertyMix:
+      "suburban homes, neighborhood retail, office buildings, and growing commercial corridors",
+    commonNeeds:
+      "driveway cleanup, siding wash-downs, clogged gutters, and seasonal storefront maintenance",
+    nearby: ["Lenexa", "Overland Park", "Shawnee"],
+    image: "/images/SideBrosWebPic1.webp",
+  },
+  {
+    slug: "overland-park-ks",
+    name: "Overland Park",
+    heading: "Exterior cleaning for homes and businesses in Overland Park, KS",
+    metaDescription:
+      "Side Bros KC provides power washing, gutter cleaning, window cleaning, concrete staining, fleet washing, and Christmas lighting in Overland Park, KS.",
+    propertyMix:
+      "high-traffic residential neighborhoods, medical offices, retail spaces, and customer-facing commercial buildings",
+    commonNeeds:
+      "curb appeal refreshes, recurring storefront cleaning, and concrete care that holds up through Midwest weather",
+    nearby: ["Leawood", "Olathe", "Prairie Village"],
+    image: "/images/SideBrosWebPic5.webp",
+  },
+  {
+    slug: "leawood-ks",
+    name: "Leawood",
+    heading: "High-detail exterior cleaning in Leawood, KS",
+    metaDescription:
+      "Exterior cleaning and surface restoration in Leawood, KS, including power washing, window cleaning, gutter cleaning, concrete staining, and holiday lighting.",
+    propertyMix:
+      "custom homes, upscale retail, medical offices, and polished commercial properties",
+    commonNeeds:
+      "soft washing, streak-free glass, precise concrete finishes, and a cleaner overall street presence",
+    nearby: ["Overland Park", "Prairie Village", "Mission Hills"],
+    image: "/images/2025-04-08.webp",
+  },
+  {
+    slug: "lenexa-ks",
+    name: "Lenexa",
+    heading: "Professional exterior cleaning in Lenexa, KS",
+    metaDescription:
+      "Power washing, gutter cleaning, fleet washing, window cleaning, concrete staining, and Christmas lighting in Lenexa, KS.",
+    propertyMix:
+      "warehouse-adjacent businesses, office parks, residential neighborhoods, and service fleets",
+    commonNeeds:
+      "building wash schedules, fleet presentation, sidewalk cleanup, and storm-season gutter service",
+    nearby: ["Olathe", "Shawnee", "Overland Park"],
+    image: "/images/SideBrosWebPic3.webp",
+  },
+  {
+    slug: "shawnee-ks",
+    name: "Shawnee",
+    heading: "Power washing and maintenance cleaning in Shawnee, KS",
+    metaDescription:
+      "Side Bros KC serves Shawnee, KS with power washing, gutter cleaning, window cleaning, fleet washing, concrete staining, and Christmas lighting.",
+    propertyMix:
+      "family neighborhoods, multi-use commercial buildings, churches, and local storefronts",
+    commonNeeds:
+      "roof-safe soft washing, gutter clearing, patio cleanup, and dependable seasonal service",
+    nearby: ["Lenexa", "Olathe", "Kansas City, KS"],
+    image: "/images/SideBrosWebPic11.jpg",
+  },
+  {
+    slug: "prairie-village-ks",
+    name: "Prairie Village",
+    heading: "Exterior cleaning tailored to Prairie Village, KS properties",
+    metaDescription:
+      "Professional exterior cleaning in Prairie Village, KS, including window cleaning, power washing, gutter service, concrete staining, and holiday lighting.",
+    propertyMix:
+      "established homes, boutique storefronts, and detail-sensitive exterior surfaces",
+    commonNeeds:
+      "careful soft washing, trim-safe cleaning, brighter windows, and understated but polished curb appeal",
+    nearby: ["Leawood", "Mission Hills", "Overland Park"],
+    image: "/images/2025-04-08%20(2).webp",
+  },
+  {
+    slug: "mission-hills-ks",
+    name: "Mission Hills",
+    heading: "High-end exterior cleaning service in Mission Hills, KS",
+    metaDescription:
+      "Side Bros KC provides premium exterior cleaning in Mission Hills, KS with power washing, window cleaning, gutter cleaning, concrete staining, and Christmas lighting.",
+    propertyMix:
+      "large residential estates, masonry-heavy exteriors, custom hardscapes, and premium finishes",
+    commonNeeds:
+      "surface-safe cleaning, detail-oriented glass work, and results that protect material quality while improving presentation",
+    nearby: ["Prairie Village", "Leawood", "Kansas City, MO"],
+    image: "/images/2025-04-08%20(3).webp",
+  },
+  {
+    slug: "kansas-city-ks",
+    name: "Kansas City, KS",
+    heading: "Exterior cleaning in Kansas City, KS",
+    metaDescription:
+      "Power washing, window cleaning, gutter cleaning, fleet washing, concrete staining, and Christmas lighting in Kansas City, KS.",
+    propertyMix:
+      "older housing stock, busy commercial strips, industrial properties, and high-use concrete surfaces",
+    commonNeeds:
+      "deep exterior cleanups, storefront visibility improvements, and recurring fleet or building maintenance",
+    nearby: ["Shawnee", "Kansas City, MO", "North Kansas City"],
+    image: "/images/2025-04-08%20(1).webp",
+  },
+  {
+    slug: "kansas-city-mo",
+    name: "Kansas City, MO",
+    heading: "Power washing and exterior cleaning in Kansas City, MO",
+    metaDescription:
+      "Side Bros KC provides professional exterior cleaning in Kansas City, MO, including power washing, gutter cleaning, window cleaning, fleet washing, concrete staining, and Christmas lighting.",
+    propertyMix:
+      "urban storefronts, apartment-adjacent retail, established neighborhoods, and commercial buildings with heavy foot traffic",
+    commonNeeds:
+      "faster storefront turnarounds, sidewalk cleanup, fleet presentation, and recurring maintenance schedules",
+    nearby: ["North Kansas City", "Kansas City, KS", "Mission Hills"],
+    image: "/images/SideBrosWebPic12.jpg",
+  },
+  {
+    slug: "north-kansas-city-mo",
+    name: "North Kansas City",
+    heading: "Commercial-friendly exterior cleaning in North Kansas City, MO",
+    metaDescription:
+      "Exterior cleaning in North Kansas City, MO for commercial buildings, fleets, storefronts, and homes.",
+    propertyMix:
+      "industrial service yards, restaurant corridors, office buildings, and compact residential properties",
+    commonNeeds:
+      "fleet washing, building face cleanup, gum and grime removal, and dependable recurring service windows",
+    nearby: ["Kansas City, MO", "Kansas City, KS", "Liberty"],
+    image: "/images/SideBrosWebPic12.jpg",
+  },
+  {
+    slug: "lees-summit-mo",
+    name: "Lee's Summit",
+    heading: "Exterior cleaning and concrete care in Lee's Summit, MO",
+    metaDescription:
+      "Power washing, gutter cleaning, window cleaning, concrete staining, fleet washing, and Christmas lighting in Lee's Summit, MO.",
+    propertyMix:
+      "growing subdivisions, retail centers, drive-heavy commercial sites, and residential hardscapes",
+    commonNeeds:
+      "driveway restoration, patio cleaning, gutter upkeep, and concrete staining that refreshes worn surfaces",
+    nearby: ["Kansas City, MO", "Liberty", "Olathe"],
+    image: "/images/SideBrosWebPic1.webp",
+  },
+  {
+    slug: "liberty-mo",
+    name: "Liberty",
+    heading: "Exterior cleaning service in Liberty, MO",
+    metaDescription:
+      "Side Bros KC serves Liberty, MO with power washing, gutter cleaning, window cleaning, fleet washing, concrete staining, and Christmas lighting.",
+    propertyMix:
+      "residential neighborhoods, school-adjacent properties, local retail, and mobile service fleets",
+    commonNeeds:
+      "seasonal wash service, gutter clearing, cleaner storefront glass, and recurring commercial upkeep",
+    nearby: ["North Kansas City", "Kansas City, MO", "Lee's Summit"],
+    image: "/images/SideBrosWebPic3.webp",
+  },
+];
+
+export function getLocationPath(slug: string) {
+  return `/service-areas/${slug}`;
+}
+
+export function getLocationBySlug(slug: string) {
+  return locationPages.find((location) => location.slug === slug);
+}
+
 export const companyInfo = {
   name: "Side Bros KC LLC",
   tagline: "The Bros Who Bring the Shine to KC.",
@@ -9,21 +200,7 @@ export const companyInfo = {
   founded: "2022",
   licensedInsured: "Licensed & Insured",
   priceRange: "$$",
-  serviceAreas: [
-    "Kansas City Metro",
-    "Olathe",
-    "Overland Park",
-    "Leawood",
-    "Lenexa",
-    "Shawnee",
-    "Prairie Village",
-    "Mission Hills",
-    "Kansas City, KS",
-    "Kansas City, MO",
-    "North Kansas City",
-    "Lee's Summit",
-    "Liberty",
-  ],
+  serviceAreas: locationPages.map((location) => location.name),
   sameAs: [
     "https://www.facebook.com/profile.php?id=61558598529435",
     "https://www.instagram.com/sidebroskc/",

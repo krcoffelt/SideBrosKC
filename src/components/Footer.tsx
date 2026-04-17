@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "./Container";
-import { companyInfo, navigation } from "@/data/company";
+import { companyInfo, getLocationPath, locationPages, navigation } from "@/data/company";
 
 export function Footer() {
   return (
@@ -31,8 +31,12 @@ export function Footer() {
             <div>
               <h3 className="font-semibold text-white">Service Area</h3>
               <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-white/78">
-                {companyInfo.serviceAreas.map((area) => (
-                  <li key={area}>{area}</li>
+                {locationPages.map((area) => (
+                  <li key={area.slug}>
+                    <Link href={getLocationPath(area.slug)} className="transition hover:text-white">
+                      {area.name}
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>

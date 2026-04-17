@@ -3,12 +3,12 @@ import { processSteps } from "@/data/company";
 export function ProcessSteps() {
   return (
     <section className="border-t border-slate-200 bg-white py-18 md:py-22">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
           <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
             How It Works
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-3 max-w-2xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             A clean three-step process that keeps projects moving.
           </h2>
         </div>
@@ -17,7 +17,7 @@ export function ProcessSteps() {
             <div key={step.title} className="relative text-slate-700">
               <span className="text-sm font-semibold text-purple-600">{index + 1}</span>
               <h3 className="mt-4 text-lg font-semibold text-slate-900">{step.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{step.description}</p>
+              <p className="mt-3 text-sm leading-6 text-slate-600 sm:leading-7">{step.description}</p>
             </div>
           ))}
         </div>

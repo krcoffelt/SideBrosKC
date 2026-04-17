@@ -102,23 +102,17 @@ export default function Home() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(111,58,255,0.28),transparent_32%),linear-gradient(180deg,rgba(11,16,33,0.08),rgba(11,16,33,0.24))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,12,28,0.86)_0%,rgba(7,12,28,0.74)_34%,rgba(7,12,28,0.46)_60%,rgba(7,12,28,0.28)_100%),radial-gradient(circle_at_top_right,rgba(111,58,255,0.3),transparent_34%),linear-gradient(180deg,rgba(11,16,33,0.18),rgba(11,16,33,0.34))]" />
         </div>
         <div className="relative mx-auto grid min-h-[calc(100svh-88px)] max-w-[1440px] items-end gap-10 px-4 pb-10 pt-10 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pb-16">
-          <div className="max-w-2xl space-y-7 text-white">
+          <div className="max-w-3xl space-y-7 text-white">
             <p className="reveal-up text-xs font-semibold uppercase tracking-[0.42em] text-purple-200">
               Side Bros KC LLC
             </p>
-            <div className="space-y-4">
-              <p className="reveal-up reveal-delay-1 max-w-sm text-sm font-medium uppercase tracking-[0.24em] text-white/70">
-                Power washing, gutter cleaning, window cleaning, fleet washing, concrete staining,
-                and holiday lighting.
-              </p>
-              <h1 className="reveal-up reveal-delay-2 max-w-3xl text-5xl font-bold leading-[0.95] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
-                The clean look Kansas City notices from the curb.
-              </h1>
-            </div>
-            <p className="reveal-up reveal-delay-3 max-w-lg text-base leading-8 text-white/78 sm:text-lg">
+            <h1 className="reveal-up reveal-delay-2 max-w-[13ch] text-4xl font-bold leading-[0.96] tracking-[-0.04em] sm:text-5xl lg:text-6xl xl:text-7xl">
+              The clean look Kansas City notices from the curb.
+            </h1>
+            <p className="reveal-up reveal-delay-3 max-w-xl text-[15px] leading-7 text-white/84 sm:text-lg sm:leading-8">
               Fast quotes, sharp finishes, and crews that know how to make homes, storefronts, and
               service fleets look dialed in without the guesswork.
             </p>
@@ -138,7 +132,7 @@ export default function Home() {
                 Call {companyInfo.phone}
               </a>
             </div>
-            <div className="reveal-up reveal-delay-5 grid max-w-xl gap-4 border-t border-white/15 pt-6 text-white/74 sm:grid-cols-3">
+            <div className="reveal-up reveal-delay-5 grid max-w-2xl gap-4 border-t border-white/15 pt-6 text-white/74 sm:grid-cols-3">
               <div>
                 <p className="text-3xl font-bold text-white">120+</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.24em]">Surfaces restored</p>
@@ -215,10 +209,10 @@ export default function Home() {
             <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white">
               Featured Results
             </p>
-            <h2 className="mt-4 max-w-md text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="mt-4 max-w-xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               Before, after, and everything people notice in between.
             </h2>
-            <p className="mt-4 max-w-md text-sm leading-7 text-slate-600 sm:text-base">
+            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
               From commercial storefronts to patios and entry walks, the work is built around clean
               edges, balanced finish, and surfaces that read better from the street.
             </p>

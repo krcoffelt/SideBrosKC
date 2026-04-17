@@ -21,10 +21,10 @@ export function CTASection({
   return (
     <section className="py-24">
       <Container>
-        <div className="relative overflow-hidden rounded-[32px] bg-purple-600 p-12 text-white shadow-[0_35px_120px_rgba(111,58,255,0.22)]">
-          <div className="max-w-3xl space-y-4">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">{title}</h2>
-            <p className="text-base text-white/84">{subtitle}</p>
+        <div className="relative overflow-hidden rounded-[32px] bg-purple-600 p-8 text-white shadow-[0_35px_120px_rgba(111,58,255,0.22)] sm:p-10 lg:p-12">
+          <div className="max-w-4xl space-y-4">
+            <h2 className="max-w-3xl text-3xl font-bold text-white sm:text-4xl">{title}</h2>
+            <p className="max-w-3xl text-base text-white/84">{subtitle}</p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={companyInfo.phoneHref}

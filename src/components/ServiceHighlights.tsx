@@ -6,14 +6,14 @@ export function ServiceHighlights() {
     <section className="border-y border-slate-200/70 bg-white py-18 md:py-22">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="space-y-4">
+          <div className="space-y-5">
             <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white">
               Services
             </p>
-            <h2 className="max-w-md text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="max-w-xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               Exterior cleaning built for busy homes and visible businesses.
             </h2>
-            <p className="max-w-sm text-sm leading-7 text-slate-600 sm:text-base">
+            <p className="max-w-lg text-sm leading-7 text-slate-600 sm:text-base">
               We keep the offer clear: high-visibility cleaning, dependable scheduling, and work
               that makes the property look sharper when people pull up.
             </p>
@@ -36,7 +36,7 @@ export function ServiceHighlights() {
                   </Link>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900">{service.name}</h3>
-                <p className="mt-2 max-w-md text-sm leading-7 text-slate-600">
+                <p className="mt-2 max-w-lg text-sm leading-7 text-slate-600">
                   {service.description}
                 </p>
               </article>

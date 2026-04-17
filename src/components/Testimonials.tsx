@@ -4,8 +4,8 @@ import { StarIcon } from "./icons";
 export function Testimonials() {
   return (
     <section className="bg-[linear-gradient(180deg,#f9f8ff_0%,#ffffff_100%)] py-18 md:py-22">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
           <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
             Testimonials
           </p>
@@ -24,7 +24,7 @@ export function Testimonials() {
                   <StarIcon key={index} className="h-4 w-4" />
                 ))}
               </div>
-              <p className="mt-4 text-base leading-8 text-slate-700">“{testimonial.quote}”</p>
+              <p className="mt-4 text-[15px] leading-7 text-slate-700 sm:text-base sm:leading-8">“{testimonial.quote}”</p>
               <p className="mt-auto pt-4 text-sm font-semibold text-slate-900">
                 {testimonial.name}
               </p>
