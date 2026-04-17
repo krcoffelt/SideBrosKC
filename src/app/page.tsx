@@ -1,35 +1,34 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { companyInfo } from "@/data/company";
-import { Container } from "@/components/Container";
 import { ServiceHighlights } from "@/components/ServiceHighlights";
 import { TrustSignals } from "@/components/TrustSignals";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { Testimonials } from "@/components/Testimonials";
 import { CTASection } from "@/components/CTASection";
 import { buildPageMetadata } from "@/lib/seo";
-import Image from "next/image";
 
 export const metadata: Metadata = buildPageMetadata({
   title: `${companyInfo.name} | ${companyInfo.tagline}`,
   description:
-    "Side Bros KC LLC delivers professional power washing, concrete staining, and custom Christmas lighting across the Kansas City metro. Get your free quote today.",
+    "Side Bros KC LLC delivers professional power washing, gutter cleaning, window cleaning, fleet washing, concrete staining, and Christmas lighting across the Kansas City metro. Get your free quote today.",
   path: "/",
   image: "/images/SideBrosWebPic12.jpg",
 });
 
 const heroImages = [
   {
-    src: "/images/SideBrosWebPic5.webp",
-    alt: "Driveway before cleaning",
-  },
-  {
     src: "/images/SideBrosWebPic1.webp",
     alt: "Driveway after cleaning",
   },
   {
-    src: "/images/SideBrosWebPic3.webp",
-    alt: "Steps and walkway after cleaning",
+    src: "/images/SideBrosWebPic12.jpg",
+    alt: "Commercial facade after cleaning",
+  },
+  {
+    src: "/images/2025-04-08.webp",
+    alt: "Concrete staining project with a clean finish",
   },
 ];
 
@@ -93,157 +92,176 @@ const featuredTransformations = [
 export default function Home() {
   return (
     <>
-      <section className="relative py-20">
-        <Container className="relative grid items-center gap-10 lg:grid-cols-[1.05fr,1fr]">
-          <div className="glass-panel card-gradient relative overflow-hidden p-10">
-            <div className="absolute -top-32 -left-28 h-72 w-72 rounded-full bg-purple-200/50 blur-3xl" />
-            <div className="absolute -bottom-36 right-0 h-72 w-72 rounded-full bg-purple-100/40 blur-3xl" />
-            <div className="relative space-y-6">
-              <div className="flex items-center justify-between">
-                <span className="stat-chip">Trusted KC Pros</span>
-                <div className="flex items-center gap-2 rounded-full border border-purple-500/20 bg-white px-4 py-2 text-xs font-semibold text-purple-600 shadow-sm">
-                  ★★★★★ <span className="text-slate-500">5.0 Google Rating</span>
-                </div>
-              </div>
-              <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
-                The Bros Who Bring the Shine to KC.
-              </h1>
-              <p className="max-w-xl text-sm text-slate-600 sm:text-base">
-                Your go-to crew for professional power washing, gutter cleaning, window cleaning,
-                fleet washing, concrete staining, and custom Christmas lighting. Licensed,
-                insured, and obsessed with dialed-in details that make your property stand out.
+      <section className="home-hero relative isolate overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={heroImages[0].src}
+            alt={heroImages[0].alt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(111,58,255,0.28),transparent_32%),linear-gradient(180deg,rgba(11,16,33,0.08),rgba(11,16,33,0.24))]" />
+        </div>
+        <div className="relative mx-auto grid min-h-[calc(100svh-88px)] max-w-[1440px] items-end gap-10 px-4 pb-10 pt-10 sm:px-6 lg:grid-cols-[minmax(0,0.86fr),minmax(0,0.7fr)] lg:px-8 lg:pb-16">
+          <div className="max-w-2xl space-y-7 text-white">
+            <p className="reveal-up text-xs font-semibold uppercase tracking-[0.42em] text-purple-200">
+              Side Bros KC LLC
+            </p>
+            <div className="space-y-4">
+              <p className="reveal-up reveal-delay-1 max-w-sm text-sm font-medium uppercase tracking-[0.24em] text-white/70">
+                Power washing, gutter cleaning, window cleaning, fleet washing, concrete staining,
+                and holiday lighting.
               </p>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/contact"
-                  className="accent-button text-white hover:opacity-90"
-                  data-analytics-event="home_hero_quote_click"
-                  data-analytics-label="Home hero quote"
-                >
-                  Get a Free Quote
-                </Link>
-                <a href={companyInfo.phoneHref} className="secondary-button">
-                  Call {companyInfo.phone}
-                </a>
+              <h1 className="reveal-up reveal-delay-2 max-w-3xl text-5xl font-bold leading-[0.95] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
+                The clean look Kansas City notices from the curb.
+              </h1>
+            </div>
+            <p className="reveal-up reveal-delay-3 max-w-lg text-base leading-8 text-white/78 sm:text-lg">
+              Fast quotes, sharp finishes, and crews that know how to make homes, storefronts, and
+              service fleets look dialed in without the guesswork.
+            </p>
+            <div className="reveal-up reveal-delay-4 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/contact"
+                className="accent-button min-w-[220px] text-white hover:opacity-90"
+                data-analytics-event="home_hero_quote_click"
+                data-analytics-label="Home hero quote"
+              >
+                Get a Free Quote
+              </Link>
+              <a
+                href={companyInfo.phoneHref}
+                className="secondary-button min-w-[220px] border-white/30 bg-white/10 text-white backdrop-blur-sm"
+              >
+                Call {companyInfo.phone}
+              </a>
+            </div>
+            <div className="reveal-up reveal-delay-5 grid max-w-xl gap-4 border-t border-white/15 pt-6 text-white/74 sm:grid-cols-3">
+              <div>
+                <p className="text-3xl font-bold text-white">120+</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.24em]">Surfaces restored</p>
               </div>
-              <div className="grid gap-4 border-t border-purple-500/10 pt-6 text-sm text-slate-600 sm:grid-cols-3">
-                <div>
-                  <p className="text-3xl font-bold text-slate-900">120+</p>
-                  <p className="text-xs uppercase tracking-widest text-purple-600/80">
-                    Surfaces Restored
-                  </p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-slate-900">80+</p>
-                  <p className="text-xs uppercase tracking-widest text-purple-600/80">
-                    Kansas City Clients
-                  </p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-slate-900">100%</p>
-                  <p className="text-xs uppercase tracking-widest text-purple-600/80">
-                    Licensed & Insured
-                  </p>
-                </div>
+              <div>
+                <p className="text-3xl font-bold text-white">80+</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.24em]">KC clients served</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold text-white">100%</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.24em]">Licensed and insured</p>
               </div>
             </div>
           </div>
-          <div className="glass-panel relative overflow-hidden p-4">
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div className="hero-image-shell reveal-up reveal-delay-4 grid gap-4 self-end lg:justify-self-end">
+            <div className="overflow-hidden rounded-[30px] border border-white/15 bg-white/8 p-3 shadow-[0_40px_90px_rgba(5,10,25,0.32)] backdrop-blur-sm">
               <Image
-                src={heroImages[0].src}
-                alt={heroImages[0].alt}
-                width={800}
-                height={600}
-                sizes="(min-width: 1024px) 32vw, 100vw"
-                className="h-64 w-full rounded-2xl object-cover sm:h-full"
-                priority
+                src="/images/SideBrosWebPic5.webp"
+                alt="Driveway before cleaning"
+                width={700}
+                height={880}
+                sizes="(min-width: 1024px) 28vw, 86vw"
+                className="h-[340px] w-full rounded-[22px] object-cover sm:h-[460px]"
               />
-              <div className="grid gap-3">
-                <Image
-                  src={heroImages[1].src}
-                  alt={heroImages[1].alt}
-                  width={800}
-                  height={400}
-                  sizes="(min-width: 640px) 24vw, 100vw"
-                  className="h-48 w-full rounded-2xl object-cover sm:h-full"
-                />
-                <Image
-                  src={heroImages[2].src}
-                  alt={heroImages[2].alt}
-                  width={800}
-                  height={400}
-                  sizes="(min-width: 640px) 24vw, 100vw"
-                  className="h-48 w-full rounded-2xl object-cover sm:h-full"
-                />
-              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {heroImages.slice(1).map((image) => (
+                <div
+                  key={image.src}
+                  className="overflow-hidden rounded-[24px] border border-white/15 bg-white/10 p-2 shadow-[0_26px_60px_rgba(5,10,25,0.24)] backdrop-blur-sm"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={420}
+                    height={420}
+                    sizes="(min-width: 1024px) 14vw, 42vw"
+                    className="h-32 w-full rounded-[18px] object-cover sm:h-40"
+                  />
+                </div>
+              ))}
             </div>
           </div>
-        </Container>
+        </div>
       </section>
 
-      <section className="px-4 pb-12">
-        <Container>
-          <div className="glass-panel flex flex-col items-center justify-between gap-4 rounded-3xl border border-purple-500/15 bg-purple-50 px-6 py-5 text-sm text-slate-700 shadow-[0_25px_60px_rgba(111,58,255,0.18)] md:flex-row md:text-base">
-            <div className="font-semibold uppercase tracking-[0.3em] text-purple-600">
-              Seasonal Offer
-            </div>
-            <p className="text-center text-slate-600 md:text-left">
-              Save 10% on Christmas lighting installations when you reserve by October 15.
-            </p>
+      <section className="border-b border-slate-200 bg-white py-8">
+        <div className="mx-auto grid max-w-6xl gap-4 px-4 sm:grid-cols-[auto,1fr,auto] sm:items-center sm:px-6 lg:px-8">
+          <div className="text-xs font-semibold uppercase tracking-[0.34em] text-purple-600">
+            Seasonal Offer
+          </div>
+          <p className="text-sm leading-7 text-slate-600 sm:text-base">
+            Save 10% on Christmas lighting installations when you reserve by October 15.
+          </p>
+          <div>
             <Link
               href="/contact"
-              className="rounded-2xl border border-purple-400/60 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-purple-600 transition hover:bg-purple-100"
+              className="text-sm font-semibold text-purple-600 transition hover:text-purple-700"
               data-analytics-event="seasonal_offer_click"
               data-analytics-label="Seasonal offer claim"
             >
               Claim Offer →
             </Link>
           </div>
-        </Container>
+        </div>
       </section>
 
       <ServiceHighlights />
       <TrustSignals />
 
-      <section className="py-20">
-        <Container className="grid gap-12 lg:grid-cols-[1.3fr,1fr]">
-          <div className="space-y-5">
-            <span className="stat-chip">Featured Results</span>
-            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              Before & after transformations that speak for themselves
-            </h2>
-            <p className="text-sm text-slate-600 sm:text-base">
-              From commercial storefronts to suburban driveways, our crew leverages professional
-              equipment, eco-friendly detergents, and meticulous prep to deliver spotless results
-              every time.
+      <section className="bg-white py-18 md:py-24">
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.84fr,1.16fr] lg:px-8">
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-purple-600">
+              Featured Results
             </p>
-            <ul className="space-y-3 text-sm text-slate-600">
-              <li>• Soft-wash systems to protect siding, roofing, and delicate surfaces.</li>
-              <li>• Industrial-grade sealers and stains engineered for Midwest weather.</li>
-              <li>• Streak-free window cleaning and recurring fleet wash scheduling.</li>
-              <li>• Custom holiday lighting designs with lifetime warranty components.</li>
+            <h2 className="mt-4 max-w-md text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Before, after, and everything people notice in between.
+            </h2>
+            <p className="mt-4 max-w-md text-sm leading-7 text-slate-600 sm:text-base">
+              From commercial storefronts to patios and entry walks, the work is built around clean
+              edges, balanced finish, and surfaces that read better from the street.
+            </p>
+            <ul className="mt-8 space-y-3 text-sm leading-7 text-slate-600">
+              <li>Soft-wash methods that protect siding, roofing, and painted finishes.</li>
+              <li>Concrete staining and sealing built for Midwest weather and heavy use.</li>
+              <li>
+                Recurring window, gutter, and fleet washing support for high-visibility properties.
+              </li>
             </ul>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {featuredTransformations.map((image) => (
-              <figure key={image.src} className="glass-panel overflow-hidden rounded-3xl p-3">
-                <div className="mb-2 inline-flex items-center rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700">
-                  {image.badge}
+            {featuredTransformations.map((image, index) => (
+              <figure key={image.src} className={index === 0 ? "sm:col-span-2" : ""}>
+                <div className="group overflow-hidden rounded-[28px] border border-slate-200 bg-white p-3 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
+                  <div className="mb-3 flex items-center justify-between gap-3 px-2">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-purple-600">
+                      {image.badge}
+                    </span>
+                    <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">
+                      KC Project
+                    </span>
+                  </div>
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={900}
+                    height={index === 0 ? 620 : 600}
+                    sizes={
+                      index === 0 ? "(min-width: 640px) 52vw, 100vw" : "(min-width: 640px) 26vw, 100vw"
+                    }
+                    className={`w-full rounded-[22px] object-cover transition duration-700 group-hover:scale-[1.02] ${
+                      index === 0 ? "h-80 sm:h-[26rem]" : "h-60"
+                    }`}
+                  />
+                  <figcaption className="px-2 pb-2 pt-4 text-sm leading-7 text-slate-600">
+                    {image.caption}
+                  </figcaption>
                 </div>
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={800}
-                  height={600}
-                  sizes="(min-width: 640px) 24vw, 100vw"
-                  className="h-48 w-full rounded-2xl object-cover sm:h-56"
-                />
-                <figcaption className="mt-2 text-sm text-slate-600">{image.caption}</figcaption>
               </figure>
             ))}
           </div>
-        </Container>
+        </div>
       </section>
 
       <ProcessSteps />

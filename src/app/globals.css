@@ -11,6 +11,7 @@
   --purple-100: #e5dcff;
   --purple-500: #6f3aff;
   --purple-600: #5b2fe0;
+  --slate-950: #0b1021;
   --gray-500: #5b6073;
 }
 
@@ -85,5 +86,64 @@
     border-color: rgba(111, 58, 255, 0.25);
     background: var(--purple-50);
     color: var(--purple-600);
+  }
+
+  .home-hero {
+    min-height: calc(100svh - 88px);
+    background:
+      linear-gradient(90deg, rgba(11, 16, 33, 0.82) 0%, rgba(11, 16, 33, 0.68) 38%, rgba(11, 16, 33, 0.16) 72%, rgba(11, 16, 33, 0.2) 100%);
+  }
+
+  .hero-image-shell {
+    animation: heroFloat 14s ease-in-out infinite;
+  }
+
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: revealUp 0.8s ease forwards;
+  }
+
+  .reveal-delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .reveal-delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .reveal-delay-3 {
+    animation-delay: 0.3s;
+  }
+
+  .reveal-delay-4 {
+    animation-delay: 0.4s;
+  }
+
+  .reveal-delay-5 {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.01);
   }
 }
