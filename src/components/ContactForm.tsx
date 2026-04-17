@@ -1,7 +1,6 @@
 "use client";
 
 import { type FormEvent, useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { trackEvent } from "@/lib/analytics";
 
 type ContactFormProps = {
@@ -27,20 +26,25 @@ const emptyUtmValues = {
 };
 
 export function ContactForm({ serviceOptions }: ContactFormProps) {
-  const searchParams = useSearchParams();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
   const [utmValues, setUtmValues] = useState(emptyUtmValues);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+
     setUtmValues(
       utmFieldNames.reduce((values, fieldName) => {
-        values[fieldName] = searchParams.get(fieldName) ?? "";
+        values[fieldName] = params.get(fieldName) ?? "";
         return values;
       }, { ...emptyUtmValues })
     );
-  }, [searchParams]);
+  }, []);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
