@@ -26,10 +26,10 @@ const serviceOptions = [
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-white via-purple-50/60 to-white py-24 text-slate-900">
-        <Container className="grid gap-12 lg:grid-cols-[1fr,1fr]">
+      <section className="bg-white py-24 text-slate-900">
+        <Container className="grid gap-12 lg:grid-cols-2">
           <div className="space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
               Contact
             </p>
             <h1 className="text-4xl font-bold sm:text-5xl">Get a free quote today</h1>
@@ -67,14 +67,14 @@ export default function ContactPage() {
       </section>
 
       <section className="py-20">
-        <Container className="grid gap-10 lg:grid-cols-[1fr,1fr]">
-          <div className="rounded-3xl border border-purple-500/15 bg-white p-8 text-slate-700 shadow-[0_25px_70px_rgba(15,23,42,0.12)]">
+        <Container className="grid gap-10 lg:grid-cols-2">
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 text-slate-700 shadow-[0_25px_70px_rgba(15,23,42,0.12)]">
             <h2 className="text-2xl font-bold text-slate-900">Visit or mail us</h2>
             <p className="mt-3 text-sm text-slate-600">
               {companyInfo.address}. We’re available for on-site consultations across the Kansas City
               metro.
             </p>
-            <div className="mt-6 overflow-hidden rounded-2xl border border-purple-500/15">
+            <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
               <iframe
                 title="Side Bros KC LLC location"
                 src={companyInfo.googleMapsEmbedSrc}
@@ -84,7 +84,7 @@ export default function ContactPage() {
               ></iframe>
             </div>
           </div>
-          <div className="rounded-3xl border border-purple-500/15 bg-white p-8 text-slate-700 shadow-[0_25px_70px_rgba(15,23,42,0.12)]">
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 text-slate-700 shadow-[0_25px_70px_rgba(15,23,42,0.12)]">
             <h2 className="text-2xl font-bold text-slate-900">Hours & Response Times</h2>
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
               <li>• Monday–Saturday: 8:00 AM – 6:00 PM</li>
@@ -92,9 +92,9 @@ export default function ContactPage() {
               <li>• Emergency services available for commercial clients</li>
               <li>• Quotes delivered within one business day</li>
             </ul>
-            <div className="mt-6 rounded-2xl bg-purple-50 p-5 text-sm text-slate-700">
-              <p className="font-semibold text-purple-600">Need immediate assistance?</p>
-              <p className="mt-1">
+            <div className="mt-6 rounded-2xl bg-purple-600 p-5 text-sm text-white">
+              <p className="font-semibold text-white">Need immediate assistance?</p>
+              <p className="mt-1 text-white/84">
                 Call or text <a href={companyInfo.phoneHref}>{companyInfo.phone}</a> and we’ll
                 respond as quickly as possible.
               </p>

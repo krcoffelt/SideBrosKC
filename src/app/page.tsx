@@ -104,7 +104,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(111,58,255,0.28),transparent_32%),linear-gradient(180deg,rgba(11,16,33,0.08),rgba(11,16,33,0.24))]" />
         </div>
-        <div className="relative mx-auto grid min-h-[calc(100svh-88px)] max-w-[1440px] items-end gap-10 px-4 pb-10 pt-10 sm:px-6 lg:grid-cols-[minmax(0,0.86fr),minmax(0,0.7fr)] lg:px-8 lg:pb-16">
+        <div className="relative mx-auto grid min-h-[calc(100svh-88px)] max-w-[1440px] items-end gap-10 px-4 pb-10 pt-10 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pb-16">
           <div className="max-w-2xl space-y-7 text-white">
             <p className="reveal-up text-xs font-semibold uppercase tracking-[0.42em] text-purple-200">
               Side Bros KC LLC
@@ -187,16 +187,16 @@ export default function Home() {
 
       <section className="border-b border-slate-200 bg-white py-8">
         <div className="mx-auto grid max-w-6xl gap-4 px-4 sm:grid-cols-[auto,1fr,auto] sm:items-center sm:px-6 lg:px-8">
-          <div className="text-xs font-semibold uppercase tracking-[0.34em] text-purple-600">
+          <div className="rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.34em] text-white">
             Seasonal Offer
           </div>
-          <p className="text-sm leading-7 text-slate-600 sm:text-base">
+          <p className="text-sm leading-7 text-slate-700 sm:text-base">
             Save 10% on Christmas lighting installations when you reserve by October 15.
           </p>
           <div>
             <Link
               href="/contact"
-              className="text-sm font-semibold text-purple-600 transition hover:text-purple-700"
+              className="rounded-full bg-purple-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-purple-500"
               data-analytics-event="seasonal_offer_click"
               data-analytics-label="Seasonal offer claim"
             >
@@ -210,9 +210,9 @@ export default function Home() {
       <TrustSignals />
 
       <section className="bg-white py-18 md:py-24">
-        <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.84fr,1.16fr] lg:px-8">
-          <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-purple-600">
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div className="space-y-5">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white">
               Featured Results
             </p>
             <h2 className="mt-4 max-w-md text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
@@ -235,7 +235,7 @@ export default function Home() {
               <figure key={image.src} className={index === 0 ? "sm:col-span-2" : ""}>
                 <div className="group overflow-hidden rounded-[28px] border border-slate-200 bg-white p-3 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
                   <div className="mb-3 flex items-center justify-between gap-3 px-2">
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-purple-600">
+                    <span className="rounded-full bg-purple-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-white">
                       {image.badge}
                     </span>
                     <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">

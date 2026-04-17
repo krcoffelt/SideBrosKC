@@ -5,9 +5,9 @@ export function ServiceHighlights() {
   return (
     <section className="border-y border-slate-200/70 bg-white py-18 md:py-22">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.85fr,1.15fr] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white">
               Services
             </p>
             <h2 className="max-w-md text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
@@ -30,7 +30,7 @@ export function ServiceHighlights() {
                   </span>
                   <Link
                     href={service.href}
-                    className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600 opacity-0 transition group-hover:opacity-100"
+                    className="rounded-full bg-purple-600 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white opacity-0 transition group-hover:opacity-100"
                   >
                     View Service
                   </Link>

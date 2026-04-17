@@ -11,7 +11,7 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-purple-500/10 bg-white/95 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-xl">
       <Container className="flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-2 text-xl font-semibold text-slate-900 whitespace-nowrap">
           <Image
@@ -75,10 +75,10 @@ function MobileMenu() {
   return (
     <div className="md:hidden">
       <details className="relative">
-        <summary className="flex cursor-pointer items-center rounded-full border border-purple-500/20 px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:bg-purple-50">
+        <summary className="flex cursor-pointer items-center rounded-full border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-purple-600 hover:bg-white">
           Menu
         </summary>
-        <div className="absolute right-0 mt-2 w-60 rounded-xl border border-purple-500/15 bg-white p-2 shadow-xl">
+        <div className="absolute right-0 mt-2 w-60 rounded-xl border border-slate-200 bg-white p-2 shadow-xl">
           <nav className="flex flex-col gap-1">
             {navigation
               .filter((item) => item.href !== "/")
@@ -92,8 +92,8 @@ function MobileMenu() {
                   className={clsx(
                     "rounded-lg px-3 py-2 text-sm font-semibold transition whitespace-nowrap",
                     isActive
-                      ? "bg-purple-50 text-purple-600"
-                      : "text-slate-700 hover:bg-purple-50"
+                      ? "bg-purple-600 text-white"
+                      : "text-slate-700 hover:bg-slate-100"
                   )}
                 >
                   {item.label}
@@ -112,7 +112,7 @@ function MobileMenu() {
             </a>
             <Link
               href="/contact"
-              className="rounded-lg border border-purple-400/60 px-3 py-2 text-center text-sm font-semibold text-purple-600 transition hover:bg-purple-50"
+              className="rounded-lg border border-purple-500 px-3 py-2 text-center text-sm font-semibold text-purple-600 transition hover:bg-purple-600 hover:text-white"
               data-analytics-event="mobile_menu_quote_click"
               data-analytics-label="Mobile menu quote button"
             >
