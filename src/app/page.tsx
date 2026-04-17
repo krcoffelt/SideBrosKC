@@ -109,9 +109,9 @@ export default function Home() {
                 The Bros Who Bring the Shine to KC.
               </h1>
               <p className="max-w-xl text-sm text-slate-600 sm:text-base">
-                Your go-to crew for professional power washing, concrete staining, gutter cleaning,
-                and custom Christmas lighting. Licensed, insured, and obsessed with dialed-in
-                details that make your property stand out.
+                Your go-to crew for professional power washing, gutter cleaning, window cleaning,
+                fleet washing, concrete staining, and custom Christmas lighting. Licensed,
+                insured, and obsessed with dialed-in details that make your property stand out.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link
@@ -221,6 +221,7 @@ export default function Home() {
             <ul className="space-y-3 text-sm text-slate-600">
               <li>• Soft-wash systems to protect siding, roofing, and delicate surfaces.</li>
               <li>• Industrial-grade sealers and stains engineered for Midwest weather.</li>
+              <li>• Streak-free window cleaning and recurring fleet wash scheduling.</li>
               <li>• Custom holiday lighting designs with lifetime warranty components.</li>
             </ul>
           </div>

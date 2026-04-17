@@ -9,7 +9,21 @@ export const companyInfo = {
   founded: "2022",
   licensedInsured: "Licensed & Insured",
   priceRange: "$$",
-  serviceAreas: ["Kansas City Metro Area", "Olathe", "North Kansas"],
+  serviceAreas: [
+    "Kansas City Metro",
+    "Olathe",
+    "Overland Park",
+    "Leawood",
+    "Lenexa",
+    "Shawnee",
+    "Prairie Village",
+    "Mission Hills",
+    "Kansas City, KS",
+    "Kansas City, MO",
+    "North Kansas City",
+    "Lee's Summit",
+    "Liberty",
+  ],
   sameAs: [
     "https://www.facebook.com/profile.php?id=61558598529435",
     "https://www.instagram.com/sidebroskc/",
@@ -46,6 +60,24 @@ export const serviceHighlights = [
     description:
       "Revive siding, driveways, and commercial exteriors with safe, professional pressure washing.",
     href: "/power-washing",
+  },
+  {
+    name: "Gutter Cleaning",
+    description:
+      "Clear clogged gutters and downspouts before overflow leads to fascia, siding, or foundation issues.",
+    href: "/gutter-cleaning",
+  },
+  {
+    name: "Window Cleaning",
+    description:
+      "Brighten storefront and residential glass with streak-free window cleaning inside and out.",
+    href: "/window-cleaning",
+  },
+  {
+    name: "Fleet Washing",
+    description:
+      "Keep trucks, trailers, and service vehicles clean, branded, and road-ready with scheduled fleet washing.",
+    href: "/fleet-washing",
   },
   {
     name: "Concrete Staining",
@@ -124,6 +156,8 @@ export const powerWashingServices = [
   "Deck Wash",
   "Roof Wash (Commercial & Residential)",
   "Gutter Cleaning",
+  "Window Cleaning",
+  "Fleet Washing",
 ];
 
 export const powerWashingFaqs = [
@@ -145,7 +179,7 @@ export const powerWashingFaqs = [
   {
     question: "What areas do you service?",
     answer:
-      "We cover the greater Kansas City metro including Olathe, Overland Park, Shawnee, and North Kansas.",
+      "We work across the greater Kansas City metro, including Olathe, Overland Park, Leawood, Lenexa, Shawnee, Prairie Village, Kansas City, and surrounding communities.",
   },
   {
     question: "Can you clean roofs without causing shingle damage?",
@@ -238,5 +272,131 @@ export const lightingFaqs = [
     question: "How early should we schedule?",
     answer:
       "We recommend booking in late summer or early fall to secure your ideal installation window.",
+  },
+];
+
+export const gutterCleaningHighlights = [
+  {
+    title: "Debris Removal & Downspout Flush",
+    description: "Clear leaves, shingle grit, and clogs so water flows away from your home.",
+  },
+  {
+    title: "Seasonal Maintenance Plans",
+    description: "Spring and fall service options help prevent surprise overflow and water damage.",
+  },
+  {
+    title: "Residential & Commercial Gutters",
+    description: "Service available for homes, office buildings, storefronts, and mixed-use properties.",
+  },
+  {
+    title: "Before Issues Get Expensive",
+    description: "Reduce the risk of fascia rot, siding stains, and foundation splash-back.",
+  },
+];
+
+export const gutterCleaningFaqs = [
+  {
+    question: "How often should gutters be cleaned in Kansas City?",
+    answer:
+      "Most homes benefit from at least two cleanings per year, with extra service after heavy leaf fall or storm debris.",
+  },
+  {
+    question: "Do you clear clogged downspouts too?",
+    answer:
+      "Yes. We remove debris from the gutter channels and flush downspouts to confirm proper drainage.",
+  },
+  {
+    question: "Can you clean gutters on commercial buildings?",
+    answer:
+      "Yes. We service retail, office, and mixed-use properties with scheduling that minimizes disruption.",
+  },
+  {
+    question: "What are the signs my gutters need service?",
+    answer:
+      "Overflow during rain, plant growth, staining on siding, and water pooling near the foundation are common warning signs.",
+  },
+];
+
+export const windowCleaningHighlights = [
+  {
+    title: "Interior & Exterior Glass",
+    description: "Remove hard-water spotting, dust, fingerprints, and film for a cleaner, brighter finish.",
+  },
+  {
+    title: "Residential & Storefront Windows",
+    description: "From entry glass to upper panes, we tailor the clean to your property type and access points.",
+  },
+  {
+    title: "Screen & Sill Detail Work",
+    description: "We clean beyond the glass so frames, tracks, and edges look finished, not half-done.",
+  },
+  {
+    title: "Recurring Service Available",
+    description: "Monthly, quarterly, and seasonal maintenance keeps visibility high and curb appeal strong.",
+  },
+];
+
+export const windowCleaningFaqs = [
+  {
+    question: "Do you clean both interior and exterior windows?",
+    answer:
+      "Yes. We offer exterior-only or full interior and exterior window cleaning depending on your needs.",
+  },
+  {
+    question: "Can you clean storefront windows on a schedule?",
+    answer:
+      "Yes. We can set recurring service for storefronts, offices, and other customer-facing properties.",
+  },
+  {
+    question: "What types of buildup do you remove?",
+    answer:
+      "We remove dust, grime, fingerprints, light mineral spotting, and the general haze that dulls clear glass.",
+  },
+  {
+    question: "Do you include screens and sills?",
+    answer:
+      "Screen, sill, and track detailing can be included so the full window area looks clean and finished.",
+  },
+];
+
+export const fleetWashingHighlights = [
+  {
+    title: "Service Fleets & Work Trucks",
+    description: "Keep vans, pickups, trailers, and commercial vehicles clean for a stronger first impression.",
+  },
+  {
+    title: "Scheduled Maintenance Routes",
+    description: "Set recurring wash intervals to keep branding sharp without relying on last-minute cleanups.",
+  },
+  {
+    title: "Exterior Focused Cleaning",
+    description: "We target road film, grime, bug buildup, and dirt accumulation on frequently used vehicles.",
+  },
+  {
+    title: "Business-Friendly Scheduling",
+    description: "Early, off-hour, and recurring service windows help keep vehicles available when you need them.",
+  },
+];
+
+export const fleetWashingFaqs = [
+  {
+    question: "What kinds of fleets do you wash?",
+    answer:
+      "We clean service vans, pickups, trailers, and other commercial vehicles used by local businesses.",
+  },
+  {
+    question: "Can you set up recurring fleet washing?",
+    answer:
+      "Yes. We can build a recurring schedule based on route volume, branding standards, and seasonal conditions.",
+  },
+  {
+    question: "Do you clean vehicles on-site?",
+    answer:
+      "Yes. We work with businesses to clean fleets at their property when site access and scheduling allow.",
+  },
+  {
+    question: "Why invest in regular fleet washing?",
+    answer:
+      "Clean vehicles protect brand perception, improve presentation with customers, and help reduce long-term grime buildup.",
   },
 ];

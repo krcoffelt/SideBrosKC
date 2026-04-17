@@ -15,10 +15,11 @@ export const metadata: Metadata = buildPageMetadata({
 
 const serviceOptions = [
   "Power Washing",
+  "Gutter Cleaning",
+  "Window Cleaning",
+  "Fleet Washing",
   "Concrete Staining",
   "Christmas Lighting",
-  "Window Cleaning",
-  "Gutter Cleaning",
   "Other / Not Sure",
 ];
 

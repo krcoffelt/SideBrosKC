@@ -4,6 +4,9 @@ import { companyInfo } from "@/data/company";
 const routes = [
   { path: "/", priority: 1, changeFrequency: "weekly" as const },
   { path: "/power-washing", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/gutter-cleaning", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/window-cleaning", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/fleet-washing", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/concrete-staining", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/christmas-lighting", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" as const },

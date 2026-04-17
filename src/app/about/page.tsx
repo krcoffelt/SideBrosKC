@@ -333,8 +333,8 @@ export default function AboutPage() {
           <div className="rounded-3xl border border-purple-500/10 bg-white p-8 text-slate-700 shadow-[0_25px_70px_rgba(15,23,42,0.12)]">
             <h3 className="text-2xl font-bold text-slate-900">Service Area</h3>
             <p className="mt-3 text-sm text-slate-600">
-              We proudly serve the Kansas City metro, Olathe, North Kansas, and surrounding
-              communities.
+              We proudly work all over the Kansas City metro, serving both Kansas and Missouri
+              communities throughout the area.
             </p>
             <ul className="mt-6 space-y-2 text-sm text-slate-600">
               {companyInfo.serviceAreas.map((area) => (
