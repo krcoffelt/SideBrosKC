@@ -5,7 +5,7 @@ import { companyInfo, getLocationPath, locationPages, navigation } from "@/data/
 export function Footer() {
   return (
     <footer className="mt-16 bg-slate-950 text-white">
-      <Container className="grid gap-12 py-14 lg:grid-cols-2 lg:items-start">
+      <Container className="grid gap-12 py-14 pb-24 lg:grid-cols-[1.05fr,0.95fr] lg:items-start lg:pb-14">
         <div className="space-y-8">
           <div>
             <h2 className="text-2xl font-semibold text-white">{companyInfo.name}</h2>
@@ -30,7 +30,7 @@ export function Footer() {
             </div>
             <div>
               <h3 className="font-semibold text-white">Service Area</h3>
-              <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-white/84">
+              <ul className="mt-3 grid grid-cols-1 gap-x-6 gap-y-2 text-white/84 sm:grid-cols-2">
                 {locationPages.map((area) => (
                   <li key={area.slug}>
                     <Link href={getLocationPath(area.slug)} className="transition hover:text-white">
@@ -89,7 +89,7 @@ export function Footer() {
           <iframe
             title="Side Bros KC LLC on Google Maps"
             src={companyInfo.googleMapsEmbedSrc}
-            className="h-80 w-full"
+            className="h-72 w-full sm:h-80 lg:h-full lg:min-h-[30rem]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>

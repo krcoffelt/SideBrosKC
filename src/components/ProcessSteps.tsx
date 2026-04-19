@@ -12,11 +12,10 @@ export function ProcessSteps() {
             A clean three-step process that keeps projects moving.
           </h2>
         </div>
-        <div className="mt-12 grid gap-8 border-t border-slate-200 pt-8 sm:grid-cols-3">
-          {processSteps.map((step, index) => (
+        <div className="mt-12 grid gap-8 border-t border-slate-200 pt-8 md:grid-cols-3">
+          {processSteps.map((step) => (
             <div key={step.title} className="relative text-slate-700">
-              <span className="text-sm font-semibold text-purple-600">{index + 1}</span>
-              <h3 className="mt-4 text-lg font-semibold text-slate-900">{step.title}</h3>
+              <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600 sm:leading-7">{step.description}</p>
             </div>
           ))}

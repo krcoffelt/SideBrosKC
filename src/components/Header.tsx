@@ -13,7 +13,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-xl">
       <Container className="flex items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-2 text-xl font-semibold text-slate-900 whitespace-nowrap">
+        <Link href="/" className="flex items-center gap-2 whitespace-nowrap text-lg font-semibold text-slate-900 sm:text-xl">
           <Image
             src="/images/SideBrosKCLogoIcon.png"
             alt="Side Bros KC logo icon"
@@ -25,7 +25,7 @@ export function Header() {
           />
           <span>Side Bros KC</span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex lg:gap-8">
+        <nav className="hidden items-center gap-6 text-sm font-medium lg:flex xl:gap-8">
           {navigation
             .filter((item) => item.href !== "/")
             .map((item) => {
@@ -45,7 +45,7 @@ export function Header() {
             );
           })}
         </nav>
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 xl:flex">
           <a
             href={companyInfo.phoneHref}
             className="accent-button hover:-translate-y-0.5"
@@ -73,7 +73,7 @@ function MobileMenu() {
   const pathname = usePathname();
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <details className="relative">
         <summary className="flex cursor-pointer items-center rounded-full border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-purple-600 hover:bg-white">
           Menu

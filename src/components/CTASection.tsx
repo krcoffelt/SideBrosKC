@@ -19,7 +19,7 @@ export function CTASection({
   secondaryHref = "/contact",
 }: CTASectionProps) {
   return (
-    <section className="py-24">
+    <section className="py-20 md:py-24">
       <Container>
         <div className="relative overflow-hidden rounded-[32px] bg-purple-600 p-8 text-white shadow-[0_35px_120px_rgba(111,58,255,0.22)] sm:p-10 lg:p-12">
           <div className="max-w-4xl space-y-4">
@@ -28,7 +28,7 @@ export function CTASection({
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={companyInfo.phoneHref}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-purple-600 transition hover:bg-slate-100"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-purple-600 transition hover:bg-slate-100 sm:w-auto"
                 data-analytics-event="cta_phone_click"
                 data-analytics-label={primaryLabel}
               >
@@ -37,7 +37,7 @@ export function CTASection({
               </a>
               <Link
                 href={secondaryHref}
-                className="inline-flex items-center justify-center rounded-full border border-white px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-purple-600"
+                className="inline-flex w-full items-center justify-center rounded-full border border-white px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-purple-600 sm:w-auto"
                 data-analytics-event="cta_quote_click"
                 data-analytics-label={secondaryLabel}
               >

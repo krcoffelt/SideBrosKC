@@ -80,7 +80,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,12,28,0.86)_0%,rgba(7,12,28,0.74)_34%,rgba(7,12,28,0.46)_60%,rgba(7,12,28,0.28)_100%),radial-gradient(circle_at_top_right,rgba(111,58,255,0.3),transparent_34%),linear-gradient(180deg,rgba(11,16,33,0.18),rgba(11,16,33,0.34))]" />
         </div>
-        <div className="relative mx-auto grid min-h-[calc(100svh-88px)] max-w-[1440px] items-end gap-10 px-4 pb-10 pt-10 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pb-16">
+        <div className="relative mx-auto grid min-h-[calc(100svh-88px)] max-w-[1440px] items-end gap-8 px-4 pb-8 pt-8 sm:px-6 sm:pb-10 sm:pt-10 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pb-16">
           <div className="max-w-3xl space-y-7 text-white">
             <p className="reveal-up text-xs font-semibold uppercase tracking-[0.42em] text-white/88">
               Side Bros KC LLC
@@ -95,7 +95,7 @@ export default function Home() {
             <div className="reveal-up reveal-delay-4 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contact"
-                className="accent-button min-w-[220px] text-white hover:opacity-90"
+                className="accent-button w-full text-white hover:opacity-90 sm:min-w-[220px] sm:w-auto"
                 data-analytics-event="home_hero_quote_click"
                 data-analytics-label="Home hero quote"
               >
@@ -103,7 +103,7 @@ export default function Home() {
               </Link>
               <a
                 href={companyInfo.phoneHref}
-                className="secondary-button min-w-[220px] border-white/50 bg-slate-950/30 text-white backdrop-blur-sm hover:border-white hover:bg-white hover:text-slate-950"
+                className="secondary-button w-full border-white/50 bg-slate-950/30 text-white backdrop-blur-sm hover:border-white hover:bg-white hover:text-slate-950 sm:min-w-[220px] sm:w-auto"
               >
                 Call {companyInfo.phone}
               </a>
@@ -123,15 +123,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hero-image-shell reveal-up reveal-delay-4 grid gap-4 self-end lg:justify-self-end">
+          <div className="hero-image-shell reveal-up reveal-delay-4 hidden gap-4 self-end md:grid lg:justify-self-end">
             <div className="overflow-hidden rounded-[30px] border border-white/20 bg-white/14 p-3 shadow-[0_40px_90px_rgba(5,10,25,0.32)] backdrop-blur-sm">
               <Image
                 src="/images/SideBrosWebPic5.webp"
                 alt="Driveway before cleaning"
                 width={700}
                 height={880}
-                sizes="(min-width: 1024px) 28vw, 86vw"
-                className="h-[340px] w-full rounded-[22px] object-cover sm:h-[460px]"
+                sizes="(min-width: 1024px) 28vw, (min-width: 768px) 42vw, 86vw"
+                className="h-[280px] w-full rounded-[22px] object-cover lg:h-[340px] xl:h-[460px]"
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -145,8 +145,8 @@ export default function Home() {
                     alt={image.alt}
                     width={420}
                     height={420}
-                    sizes="(min-width: 1024px) 14vw, 42vw"
-                    className="h-32 w-full rounded-[18px] object-cover sm:h-40"
+                    sizes="(min-width: 1024px) 14vw, (min-width: 768px) 20vw, 42vw"
+                    className="h-28 w-full rounded-[18px] object-cover lg:h-32 xl:h-40"
                   />
                 </div>
               ))}
@@ -180,7 +180,7 @@ export default function Home() {
       <TrustSignals />
 
       <section className="bg-white py-18 md:py-24">
-        <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.82fr,1.18fr] lg:gap-12 lg:px-8">
           <div className="space-y-5 lg:pr-10">
             <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white">
               Selected Work
@@ -196,7 +196,7 @@ export default function Home() {
               Residential and commercial projects across the Kansas City metro.
             </p>
           </div>
-          <div className="grid auto-rows-[220px] gap-4 sm:grid-cols-2 sm:auto-rows-[240px]">
+          <div className="grid auto-rows-[200px] gap-4 sm:grid-cols-2 sm:auto-rows-[220px] lg:auto-rows-[240px]">
             {featuredTransformations.map((image, index) => (
               <figure
                 key={image.src}

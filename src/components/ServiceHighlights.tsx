@@ -5,7 +5,7 @@ export function ServiceHighlights() {
   return (
     <section className="border-y border-slate-200/70 bg-white py-18 md:py-22">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-[0.84fr,1.16fr] lg:gap-16">
           <div className="space-y-5">
             <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white">
               Services
@@ -27,7 +27,7 @@ export function ServiceHighlights() {
                 <div className="mb-2 flex items-center justify-end gap-4">
                   <Link
                     href={service.href}
-                    className="rounded-full bg-purple-600 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white opacity-0 transition group-hover:opacity-100"
+                    className="rounded-full bg-purple-600 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white transition lg:opacity-0 lg:group-hover:opacity-100"
                   >
                     View Service
                   </Link>

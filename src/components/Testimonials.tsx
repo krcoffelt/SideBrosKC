@@ -16,7 +16,7 @@ export function Testimonials() {
             Real feedback from homeowners and businesses across the Kansas City metro.
           </p>
         </div>
-        <div className="mt-12 grid gap-8 border-t border-slate-200 pt-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 border-t border-slate-200 pt-8 md:grid-cols-2 xl:grid-cols-3">
           {testimonials.map((testimonial) => (
             <article key={testimonial.name} className="flex h-full flex-col border-l-4 border-purple-600 pl-5">
               <div className="flex items-center gap-0.5 text-purple-500">
