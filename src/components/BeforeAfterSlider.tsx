@@ -24,7 +24,7 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSli
   return (
     <div className="space-y-3">
       <div
-        className="relative overflow-hidden rounded-3xl border border-purple-500/12 bg-white"
+        className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white"
         onPointerDown={(event) => {
           setIsDragging(true);
           updatePositionFromEvent(event);
@@ -62,12 +62,12 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSli
           style={{ "--pos": position } as CSSProperties}
           aria-hidden="true"
         >
-          <div className="flex h-12 w-12 cursor-pointer touch-none items-center justify-center rounded-full bg-white/90 shadow">
-            <span className="text-xs font-semibold text-slate-600">Drag</span>
+          <div className="flex h-12 w-12 cursor-pointer touch-none items-center justify-center rounded-full border border-slate-200 bg-white shadow">
+            <span className="text-xs font-semibold text-slate-900">Drag</span>
           </div>
         </div>
       </div>
-      <label className="block text-sm font-semibold text-purple-700">
+      <label className="block text-sm font-semibold text-slate-900">
         Before / After: {label}
         <input
           type="range"
@@ -76,8 +76,8 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, label }: BeforeAfterSli
           value={position}
           onChange={(event) => setPosition(Number(event.target.value))}
           className={clsx(
-            "mt-2 h-2 w-full cursor-pointer appearance-none rounded-full bg-purple-100",
-            "accent-purple-500"
+            "mt-2 h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-200",
+            "accent-purple-600"
           )}
           aria-valuemin={0}
           aria-valuemax={100}

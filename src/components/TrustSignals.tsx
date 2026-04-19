@@ -9,7 +9,7 @@ export function TrustSignals() {
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white">
               {signal.label}
             </p>
-            <p className="mt-4 text-sm leading-7 text-white/82">{signal.description}</p>
+            <p className="mt-4 text-sm leading-7 text-white/90">{signal.description}</p>
           </div>
         ))}
       </div>

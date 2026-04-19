@@ -34,58 +34,34 @@ const heroImages = [
 
 const featuredTransformations = [
   {
-    badge: "Before",
-    src: "/images/SideBrosWebPic5.webp",
-    alt: "Driveway before cleaning",
-    caption: "Driveway prep with detergents activating on the surface.",
-  },
-  {
-    badge: "After",
+    badge: "Power Washing",
     src: "/images/SideBrosWebPic1.webp",
     alt: "Driveway after cleaning",
-    caption: "Clean, even finish after a full power wash and rinse.",
   },
   {
-    badge: "Walkway",
+    badge: "Entry Walk",
     src: "/images/SideBrosWebPic3.webp",
     alt: "Steps and walkway after cleaning",
-    caption: "Steps and walkway brightened with a safe wash sequence.",
   },
   {
-    badge: "Commercial Before",
-    src: "/images/SideBrosWebPic11.jpg",
-    alt: "Commercial facade before cleaning",
-    caption: "Stained bank exterior prior to soft washing.",
-  },
-  {
-    badge: "Commercial After",
+    badge: "Commercial",
     src: "/images/SideBrosWebPic12.jpg",
     alt: "Commercial facade after cleaning",
-    caption: "Facade restored to a uniform, clean finish post-wash.",
   },
   {
     badge: "Staining",
     src: "/images/2025-04-08.webp",
     alt: "Concrete staining project with a clean finish",
-    caption: "Concrete staining with crisp lines and uniform color.",
   },
   {
-    badge: "Patio Before",
-    src: "/images/2025-04-08%20(2).webp",
-    alt: "Backyard patio before cleaning",
-    caption: "Backyard patio prior to wash and refresh.",
-  },
-  {
-    badge: "Patio After",
+    badge: "Patio",
     src: "/images/2025-04-08%20(3).webp",
     alt: "Backyard patio after cleaning",
-    caption: "Same patio after a thorough cleaning and rinse.",
   },
   {
-    badge: "Wall Wash",
+    badge: "Concrete",
     src: "/images/2025-04-08%20(1).webp",
     alt: "Power washing a concrete retaining wall",
-    caption: "Retaining wall cleaned with controlled pressure for even results.",
   },
 ];
 
@@ -106,13 +82,13 @@ export default function Home() {
         </div>
         <div className="relative mx-auto grid min-h-[calc(100svh-88px)] max-w-[1440px] items-end gap-10 px-4 pb-10 pt-10 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pb-16">
           <div className="max-w-3xl space-y-7 text-white">
-            <p className="reveal-up text-xs font-semibold uppercase tracking-[0.42em] text-purple-200">
+            <p className="reveal-up text-xs font-semibold uppercase tracking-[0.42em] text-white/88">
               Side Bros KC LLC
             </p>
             <h1 className="reveal-up reveal-delay-2 max-w-[13ch] text-4xl font-bold leading-[0.96] tracking-[-0.04em] sm:text-5xl lg:text-6xl xl:text-7xl">
               The clean look Kansas City notices from the curb.
             </h1>
-            <p className="reveal-up reveal-delay-3 max-w-xl text-[15px] leading-7 text-white/84 sm:text-lg sm:leading-8">
+            <p className="reveal-up reveal-delay-3 max-w-xl text-[15px] leading-7 text-white/90 sm:text-lg sm:leading-8">
               Fast quotes, sharp finishes, and crews that know how to make homes, storefronts, and
               service fleets look dialed in without the guesswork.
             </p>
@@ -127,12 +103,12 @@ export default function Home() {
               </Link>
               <a
                 href={companyInfo.phoneHref}
-                className="secondary-button min-w-[220px] border-white/30 bg-white/10 text-white backdrop-blur-sm"
+                className="secondary-button min-w-[220px] border-white/50 bg-slate-950/30 text-white backdrop-blur-sm hover:border-white hover:bg-white hover:text-slate-950"
               >
                 Call {companyInfo.phone}
               </a>
             </div>
-            <div className="reveal-up reveal-delay-5 grid max-w-2xl gap-4 border-t border-white/15 pt-6 text-white/74 sm:grid-cols-3">
+            <div className="reveal-up reveal-delay-5 grid max-w-2xl gap-4 border-t border-white/25 pt-6 text-white/86 sm:grid-cols-3">
               <div>
                 <p className="text-3xl font-bold text-white">120+</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.24em]">Surfaces restored</p>
@@ -148,7 +124,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-image-shell reveal-up reveal-delay-4 grid gap-4 self-end lg:justify-self-end">
-            <div className="overflow-hidden rounded-[30px] border border-white/15 bg-white/8 p-3 shadow-[0_40px_90px_rgba(5,10,25,0.32)] backdrop-blur-sm">
+            <div className="overflow-hidden rounded-[30px] border border-white/20 bg-white/14 p-3 shadow-[0_40px_90px_rgba(5,10,25,0.32)] backdrop-blur-sm">
               <Image
                 src="/images/SideBrosWebPic5.webp"
                 alt="Driveway before cleaning"
@@ -162,7 +138,7 @@ export default function Home() {
               {heroImages.slice(1).map((image) => (
                 <div
                   key={image.src}
-                  className="overflow-hidden rounded-[24px] border border-white/15 bg-white/10 p-2 shadow-[0_26px_60px_rgba(5,10,25,0.24)] backdrop-blur-sm"
+                  className="overflow-hidden rounded-[24px] border border-white/20 bg-white/14 p-2 shadow-[0_26px_60px_rgba(5,10,25,0.24)] backdrop-blur-sm"
                 >
                   <Image
                     src={image.src}
@@ -205,52 +181,54 @@ export default function Home() {
 
       <section className="bg-white py-18 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div className="space-y-5">
+          <div className="space-y-5 lg:pr-10">
             <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white">
-              Featured Results
+              Selected Work
             </p>
             <h2 className="mt-4 max-w-xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Before, after, and everything people notice in between.
+              A cleaner, quieter way to show the finished work.
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
-              From commercial storefronts to patios and entry walks, the work is built around clean
-              edges, balanced finish, and surfaces that read better from the street.
+              These are the kinds of results people remember: sharper curb appeal, cleaner
+              storefront presence, and surfaces that feel maintained the moment you pull up.
             </p>
-            <ul className="mt-8 space-y-3 text-sm leading-7 text-slate-600">
-              <li>Soft-wash methods that protect siding, roofing, and painted finishes.</li>
-              <li>Concrete staining and sealing built for Midwest weather and heavy use.</li>
-              <li>
-                Recurring window, gutter, and fleet washing support for high-visibility properties.
-              </li>
-            </ul>
+            <p className="text-sm font-medium text-slate-500">
+              Residential and commercial projects across the Kansas City metro.
+            </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid auto-rows-[220px] gap-4 sm:grid-cols-2 sm:auto-rows-[240px]">
             {featuredTransformations.map((image, index) => (
-              <figure key={image.src} className={index === 0 ? "sm:col-span-2" : ""}>
-                <div className="group overflow-hidden rounded-[28px] border border-slate-200 bg-white p-3 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
-                  <div className="mb-3 flex items-center justify-between gap-3 px-2">
-                    <span className="rounded-full bg-purple-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-white">
-                      {image.badge}
-                    </span>
-                    <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">
-                      KC Project
-                    </span>
-                  </div>
+              <figure
+                key={image.src}
+                className={
+                  index === 0
+                    ? "sm:col-span-2 sm:row-span-2"
+                    : index === 3
+                      ? "sm:row-span-2"
+                      : ""
+                }
+              >
+                <div className="group relative h-full overflow-hidden rounded-[30px] border border-slate-200 bg-slate-100 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
                   <Image
                     src={image.src}
                     alt={image.alt}
                     width={900}
-                    height={index === 0 ? 620 : 600}
+                    height={900}
                     sizes={
-                      index === 0 ? "(min-width: 640px) 52vw, 100vw" : "(min-width: 640px) 26vw, 100vw"
+                      index === 0
+                        ? "(min-width: 1024px) 46vw, 100vw"
+                        : index === 3
+                          ? "(min-width: 1024px) 22vw, 100vw"
+                          : "(min-width: 640px) 26vw, 100vw"
                     }
-                    className={`w-full rounded-[22px] object-cover transition duration-700 group-hover:scale-[1.02] ${
-                      index === 0 ? "h-80 sm:h-[26rem]" : "h-60"
-                    }`}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
                   />
-                  <figcaption className="px-2 pb-2 pt-4 text-sm leading-7 text-slate-600">
-                    {image.caption}
-                  </figcaption>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/42 via-transparent to-transparent" />
+                  <div className="absolute left-4 top-4">
+                    <span className="inline-flex rounded-full bg-white/92 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-900 shadow-sm">
+                      {image.badge}
+                    </span>
+                  </div>
                 </div>
               </figure>
             ))}

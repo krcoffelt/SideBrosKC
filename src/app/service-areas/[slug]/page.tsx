@@ -160,7 +160,7 @@ export default async function LocationPage({ params }: PageProps) {
           </div>
           <div className="rounded-3xl bg-purple-600 p-8 text-white shadow-[0_24px_60px_rgba(111,58,255,0.18)]">
             <h2 className="text-3xl font-bold sm:text-4xl">Nearby areas we cover</h2>
-            <p className="mt-4 text-base leading-7 text-white/84">
+            <p className="mt-4 text-base leading-7 text-white/90">
               If your property is near {location.name}, there is a good chance we already service
               your area. Use these local pages to find the closest fit.
             </p>

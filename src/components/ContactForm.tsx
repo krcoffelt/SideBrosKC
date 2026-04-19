@@ -94,7 +94,7 @@ export function ContactForm({ serviceOptions }: ContactFormProps) {
 
   return (
     <form
-      className="space-y-6 rounded-3xl border border-purple-500/15 bg-white p-6 shadow-[0_25px_70px_rgba(15,23,42,0.12)]"
+      className="space-y-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_25px_70px_rgba(15,23,42,0.12)]"
       method="post"
       encType="multipart/form-data"
       onSubmit={handleSubmit}
@@ -125,7 +125,7 @@ export function ContactForm({ serviceOptions }: ContactFormProps) {
             type="text"
             autoComplete="name"
             required
-            className="mt-2 w-full rounded-xl border border-purple-500/20 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
+            className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
             placeholder="First and last name"
           />
         </div>
@@ -139,7 +139,7 @@ export function ContactForm({ serviceOptions }: ContactFormProps) {
             type="email"
             autoComplete="email"
             required
-            className="mt-2 w-full rounded-xl border border-purple-500/20 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
+            className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
             placeholder="you@email.com"
           />
         </div>
@@ -153,7 +153,7 @@ export function ContactForm({ serviceOptions }: ContactFormProps) {
             type="tel"
             autoComplete="tel"
             required
-            className="mt-2 w-full rounded-xl border border-purple-500/20 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
+            className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
             placeholder="(913) 286-9119"
           />
         </div>
@@ -165,7 +165,7 @@ export function ContactForm({ serviceOptions }: ContactFormProps) {
             id="preferred-contact"
             name="preferredContact"
             defaultValue="Call"
-            className="mt-2 w-full rounded-xl border border-purple-500/20 bg-white px-3 py-2 text-sm text-slate-900 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
+            className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
           >
             <option className="text-slate-900">Call</option>
             <option className="text-slate-900">Text</option>
@@ -182,7 +182,7 @@ export function ContactForm({ serviceOptions }: ContactFormProps) {
                 type="checkbox"
                 name="services"
                 value={service}
-                className="h-4 w-4 rounded border border-purple-500/25 bg-white text-purple-500 focus:ring-purple-200"
+                className="h-4 w-4 rounded border border-slate-300 bg-white text-purple-600 focus:ring-purple-200"
               />
               {service}
             </label>
@@ -197,7 +197,7 @@ export function ContactForm({ serviceOptions }: ContactFormProps) {
           id="message"
           name="message"
           rows={4}
-          className="mt-2 w-full rounded-xl border border-purple-500/20 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
+          className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
           placeholder="Tell us about the surfaces, timelines, or questions you have."
         />
       </div>
@@ -211,9 +211,9 @@ export function ContactForm({ serviceOptions }: ContactFormProps) {
           type="file"
           accept="image/jpeg,image/png,image/webp"
           multiple
-          className="mt-2 w-full rounded-xl border border-purple-500/20 bg-white px-3 py-2 text-sm text-slate-900 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200 file:mr-3 file:rounded-lg file:border-0 file:bg-purple-600 file:px-3 file:py-2 file:text-sm file:font-semibold file:text-white"
+          className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200 file:mr-3 file:rounded-lg file:border-0 file:bg-purple-600 file:px-3 file:py-2 file:text-sm file:font-semibold file:text-white"
         />
-        <p className="mt-1 text-xs text-slate-500">
+        <p className="mt-1 text-xs text-slate-600">
           Accepted formats: JPG, PNG, or WebP. Up to 3 files, 5MB each.
         </p>
       </div>
@@ -224,7 +224,7 @@ export function ContactForm({ serviceOptions }: ContactFormProps) {
       >
         {isSubmitting ? "Sending Request..." : "Submit Request"}
       </button>
-      <p className="text-xs text-slate-500">
+      <p className="text-xs text-slate-600">
         By submitting this form you agree to be contacted about Side Bros KC LLC services.
       </p>
       <p

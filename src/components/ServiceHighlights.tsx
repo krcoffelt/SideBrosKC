@@ -19,15 +19,12 @@ export function ServiceHighlights() {
             </p>
           </div>
           <div className="grid gap-x-8 gap-y-0 border-t border-slate-200 md:grid-cols-2">
-            {serviceHighlights.map((service, index) => (
+            {serviceHighlights.map((service) => (
               <article
                 key={service.name}
                 className="group border-b border-slate-200 py-5 transition-colors hover:border-purple-300"
               >
-                <div className="mb-2 flex items-center justify-between gap-4">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                <div className="mb-2 flex items-center justify-end gap-4">
                   <Link
                     href={service.href}
                     className="rounded-full bg-purple-600 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white opacity-0 transition group-hover:opacity-100"

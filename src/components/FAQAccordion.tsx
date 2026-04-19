@@ -16,7 +16,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="divide-y divide-purple-500/10 rounded-3xl border border-purple-500/15 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
+    <div className="divide-y divide-slate-200 rounded-3xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
 
@@ -33,7 +33,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
               </span>
               <span
                 className={clsx(
-                  "inline-flex h-6 w-6 items-center justify-center rounded-full border border-purple-200 text-sm font-semibold text-purple-600 transition",
+                  "inline-flex h-7 w-7 items-center justify-center rounded-full border border-purple-600 bg-purple-50 text-sm font-semibold text-purple-600 transition",
                   isOpen ? "rotate-45" : "rotate-0"
                 )}
                 aria-hidden="true"
@@ -43,7 +43,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
             </button>
             <div
               className={clsx(
-                "grid overflow-hidden px-6 text-sm text-slate-600 transition-all duration-300 ease-out",
+                "grid overflow-hidden px-6 text-sm leading-7 text-slate-700 transition-all duration-300 ease-out",
                 isOpen ? "grid-rows-[1fr] pb-6" : "grid-rows-[0fr]"
               )}
             >

@@ -32,13 +32,10 @@ export default function ConcreteStainingPage() {
           buildFAQSchema(concreteFaqs),
         ]}
       />
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/70 to-white py-24 text-slate-900">
-        <div className="absolute inset-0">
-          <div className="absolute left-10 top-10 h-64 w-64 rounded-full bg-purple-200/45 blur-3xl" />
-        </div>
-        <Container className="relative grid items-center gap-10 lg:grid-cols-[1fr,1.1fr]">
+      <section className="bg-white py-24 text-slate-900">
+        <Container className="grid items-center gap-10 lg:grid-cols-[1fr,1.1fr]">
           <div className="space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
               Concrete Staining
             </p>
             <h1 className="text-4xl font-bold sm:text-5xl">
@@ -52,7 +49,7 @@ export default function ConcreteStainingPage() {
               {concreteHighlights.map((highlight) => (
                 <div
                   key={highlight.title}
-                  className="glass-panel rounded-3xl border border-purple-500/10 bg-white p-5 text-slate-700"
+                  className="glass-panel p-5 text-slate-700"
                 >
                   <h3 className="text-lg font-semibold text-slate-900">{highlight.title}</h3>
                   <p className="mt-2 text-sm text-slate-600">{highlight.description}</p>
@@ -60,7 +57,7 @@ export default function ConcreteStainingPage() {
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-3xl border border-purple-400/25 shadow-[0_30px_70px_rgba(111,58,255,0.18)]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
             <Image
               src="/images/2025-04-08.webp"
               alt="Freshly stained concrete with crisp edging"
@@ -85,7 +82,7 @@ export default function ConcreteStainingPage() {
               beautifully. Choose from customizable colors, finishes, and slip-resistant additives
               for a surface that stays stunning year after year.
             </p>
-            <ol className="space-y-4 border-l-2 border-purple-300 pl-6 text-sm text-slate-600">
+            <ol className="space-y-4 border-l-2 border-slate-300 pl-6 text-sm text-slate-600">
               <li>
                 <strong className="block font-semibold text-slate-900">1. Surface preparation</strong>
                 Removal of dirt, oil, and laitance plus optional crack repair for a flawless base.
@@ -104,7 +101,7 @@ export default function ConcreteStainingPage() {
               </li>
             </ol>
           </div>
-          <div className="relative overflow-hidden rounded-3xl border border-purple-500/12 shadow-[0_25px_75px_rgba(15,23,42,0.12)]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
             <Image
               src="/images/SideBrosWebPic8.webp"
               alt="Clean concrete patio after staining and washdown"

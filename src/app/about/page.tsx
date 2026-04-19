@@ -39,31 +39,31 @@ const values = [
 const walkwaySequence = [
   {
     src: "/images/SideBrosWebPic7.webp",
-    label: "Step 1",
+    label: "Prep",
     fileId: "SideBrosWebPic7",
     alt: "Walkway prep before cleaning",
   },
   {
     src: "/images/SideBrosWebPic4.webp",
-    label: "Step 2",
+    label: "Wash",
     fileId: "SideBrosWebPic4",
     alt: "Walkway during power washing",
   },
   {
     src: "/images/SideBrosWebPic6.webp",
-    label: "Step 3",
+    label: "Rinse",
     fileId: "SideBrosWebPic6",
     alt: "Walkway rinse in progress",
   },
   {
     src: "/images/SideBrosWebPic8.webp",
-    label: "Step 4",
+    label: "Dry",
     fileId: "SideBrosWebPic8",
     alt: "Walkway drying after wash",
   },
   {
     src: "/images/SideBrosWebPic3.webp",
-    label: "Step 5",
+    label: "Finish",
     fileId: "SideBrosWebPic3",
     alt: "Clean walkway and steps",
   },
@@ -72,13 +72,10 @@ const walkwaySequence = [
 export default function AboutPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/70 to-white py-24 text-slate-900">
-        <div className="absolute inset-0">
-          <div className="absolute left-12 top-10 h-72 w-72 rounded-full bg-purple-200/45 blur-3xl" />
-        </div>
-        <Container className="relative grid gap-12 lg:grid-cols-[1.1fr,1fr]">
+      <section className="bg-white py-24 text-slate-900">
+        <Container className="grid gap-12 lg:grid-cols-[1.1fr,1fr]">
           <div className="space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
               About Us
             </p>
             <h1 className="text-4xl font-bold sm:text-5xl">
@@ -91,13 +88,13 @@ export default function AboutPage() {
               homes and businesses.
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-purple-400/30 bg-white p-5">
+              <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-purple-600">
                   Founded
                 </h3>
                 <p className="mt-1 text-lg font-semibold text-slate-900">{companyInfo.founded}</p>
               </div>
-              <div className="rounded-3xl border border-purple-400/30 bg-white p-5">
+              <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-purple-600">
                   Licensed & Insured
                 </h3>
@@ -107,7 +104,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-3xl border border-purple-400/20 shadow-[0_30px_70px_rgba(111,58,255,0.18)]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
             <Image
               src="/images/SideBrosWebPic12.jpg"
               alt="Commercial exterior restored by Side Bros KC"
@@ -123,7 +120,7 @@ export default function AboutPage() {
       <section className="bg-white py-16">
         <Container className="space-y-10">
           <div className="space-y-3 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white">
               Results
             </p>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Driveway revival</h2>
@@ -133,10 +130,10 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
-            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
-              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+            <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white">
                 <span>Before</span>
-                <span className="text-[10px] text-purple-500">SideBrosWebPic5</span>
+                <span className="text-[10px] text-white/80">SideBrosWebPic5</span>
               </div>
               <Image
                 src="/images/SideBrosWebPic5.webp"
@@ -146,10 +143,10 @@ export default function AboutPage() {
                 className="h-[420px] w-full object-cover sm:h-[520px]"
               />
             </figure>
-            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
-              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+            <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white">
                 <span>After</span>
-                <span className="text-[10px] text-purple-500">SideBrosWebPic1</span>
+                <span className="text-[10px] text-white/80">SideBrosWebPic1</span>
               </div>
               <Image
                 src="/images/SideBrosWebPic1.webp"
@@ -163,10 +160,10 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-gradient-to-br from-white via-purple-50/70 to-white py-16">
+      <section className="bg-white py-16">
         <Container className="space-y-10">
           <div className="space-y-3 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white">
               Commercial Clean
             </p>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Bank facade refresh</h2>
@@ -175,10 +172,10 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
-            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
-              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+            <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white">
                 <span>Before</span>
-                <span className="text-[10px] text-purple-500">SideBrosWebPic11</span>
+                <span className="text-[10px] text-white/80">SideBrosWebPic11</span>
               </div>
               <Image
                 src="/images/SideBrosWebPic11.jpg"
@@ -188,10 +185,10 @@ export default function AboutPage() {
                 className="h-[360px] w-full object-cover sm:h-[460px]"
               />
             </figure>
-            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
-              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+            <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white">
                 <span>After</span>
-                <span className="text-[10px] text-purple-500">SideBrosWebPic12</span>
+                <span className="text-[10px] text-white/80">SideBrosWebPic12</span>
               </div>
               <Image
                 src="/images/SideBrosWebPic12.jpg"
@@ -205,10 +202,10 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-gradient-to-br from-white via-purple-50/60 to-white py-16">
+      <section className="bg-white py-16">
         <Container className="space-y-8">
           <div className="space-y-3 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white">
               Steps & Walkway
             </p>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Progress walkthrough</h2>
@@ -220,11 +217,11 @@ export default function AboutPage() {
             {walkwaySequence.map((photo) => (
               <figure
                 key={photo.src}
-                className="overflow-hidden rounded-3xl border border-purple-500/15 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.08)]"
+                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.08)]"
               >
-                <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                <div className="flex items-center justify-between bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white">
                   <span>{photo.label}</span>
-                  <span className="text-[10px] text-purple-500">{photo.fileId}</span>
+                  <span className="text-[10px] text-white/80">{photo.fileId}</span>
                 </div>
                 <Image
                   src={photo.src}
@@ -242,7 +239,7 @@ export default function AboutPage() {
       <section className="bg-white py-16">
         <Container className="space-y-10">
           <div className="space-y-3 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white">
               Concrete & Patio
             </p>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
@@ -253,10 +250,10 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
-              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+            <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white">
                 <span>Staining</span>
-                <span className="text-[10px] text-purple-500">2025-04-08</span>
+                <span className="text-[10px] text-white/80">2025-04-08</span>
               </div>
               <Image
                 src="/images/2025-04-08.webp"
@@ -266,10 +263,10 @@ export default function AboutPage() {
                 className="h-[300px] w-full object-cover sm:h-[360px]"
               />
             </figure>
-            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
-              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+            <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white">
                 <span>Patio Before</span>
-                <span className="text-[10px] text-purple-500">2025-04-08 (2)</span>
+                <span className="text-[10px] text-white/80">2025-04-08 (2)</span>
               </div>
               <Image
                 src="/images/2025-04-08%20(2).webp"
@@ -279,10 +276,10 @@ export default function AboutPage() {
                 className="h-[300px] w-full object-cover sm:h-[360px]"
               />
             </figure>
-            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
-              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+            <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <div className="flex items-center justify-between bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white">
                 <span>Patio After</span>
-                <span className="text-[10px] text-purple-500">2025-04-08 (3)</span>
+                <span className="text-[10px] text-white/80">2025-04-08 (3)</span>
               </div>
               <Image
                 src="/images/2025-04-08%20(3).webp"
@@ -292,10 +289,10 @@ export default function AboutPage() {
                 className="h-[300px] w-full object-cover sm:h-[360px]"
               />
             </figure>
-            <figure className="overflow-hidden rounded-3xl border border-purple-500/15 shadow-[0_18px_55px_rgba(15,23,42,0.1)] sm:col-span-2 lg:col-span-1">
-              <div className="flex items-center justify-between bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-700">
+            <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-[0_18px_55px_rgba(15,23,42,0.1)] sm:col-span-2 lg:col-span-1">
+              <div className="flex items-center justify-between bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white">
                 <span>Wall Wash</span>
-                <span className="text-[10px] text-purple-500">2025-04-08 (1)</span>
+                <span className="text-[10px] text-white/80">2025-04-08 (1)</span>
               </div>
               <Image
                 src="/images/2025-04-08%20(1).webp"
@@ -322,7 +319,7 @@ export default function AboutPage() {
               {values.map((value) => (
                 <div
                   key={value.title}
-                  className="glass-panel rounded-3xl border border-purple-500/10 bg-white p-5 text-slate-700"
+                  className="glass-panel p-5 text-slate-700"
                 >
                   <h3 className="text-lg font-semibold text-slate-900">{value.title}</h3>
                   <p className="mt-2 text-sm text-slate-600">{value.description}</p>
@@ -330,7 +327,7 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-          <div className="rounded-3xl border border-purple-500/10 bg-white p-8 text-slate-700 shadow-[0_25px_70px_rgba(15,23,42,0.12)]">
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 text-slate-700 shadow-[0_25px_70px_rgba(15,23,42,0.12)]">
             <h3 className="text-2xl font-bold text-slate-900">Service Area</h3>
             <p className="mt-3 text-sm text-slate-600">
               We proudly work all over the Kansas City metro, serving both Kansas and Missouri
@@ -339,12 +336,12 @@ export default function AboutPage() {
             <ul className="mt-6 space-y-2 text-sm text-slate-600">
               {companyInfo.serviceAreas.map((area) => (
                 <li key={area} className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-purple-400" aria-hidden="true" />
+                  <span className="h-2 w-2 rounded-full bg-purple-600" aria-hidden="true" />
                   {area}
                 </li>
               ))}
             </ul>
-            <div className="mt-8 overflow-hidden rounded-2xl border border-purple-500/15">
+            <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200">
               <iframe
                 title="Service area map"
                 src={companyInfo.googleMapsEmbedSrc}

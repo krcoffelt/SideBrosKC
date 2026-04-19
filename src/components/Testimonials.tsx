@@ -28,7 +28,7 @@ export function Testimonials() {
               <p className="mt-auto pt-4 text-sm font-semibold text-slate-900">
                 {testimonial.name}
               </p>
-              <p className="text-xs uppercase tracking-wide text-purple-500/70">
+              <p className="text-xs uppercase tracking-wide text-slate-500">
                 {testimonial.location}
               </p>
             </article>

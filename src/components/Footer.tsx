@@ -9,12 +9,12 @@ export function Footer() {
         <div className="space-y-8">
           <div>
             <h2 className="text-2xl font-semibold text-white">{companyInfo.name}</h2>
-            <p className="mt-2 text-sm text-white/78">{companyInfo.tagline}</p>
+            <p className="mt-2 text-sm text-white/86">{companyInfo.tagline}</p>
           </div>
           <div className="grid gap-8 text-sm sm:grid-cols-2">
             <div>
               <h3 className="font-semibold text-white">Contact</h3>
-              <ul className="mt-3 space-y-2 text-white/78">
+              <ul className="mt-3 space-y-2 text-white/84">
                 <li>
                   <a href={companyInfo.phoneHref} className="text-white transition hover:text-white/70">
                     {companyInfo.phone}
@@ -25,12 +25,12 @@ export function Footer() {
                     {companyInfo.email}
                   </a>
                 </li>
-                <li className="text-white/70">{companyInfo.address}</li>
+                <li className="text-white/80">{companyInfo.address}</li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold text-white">Service Area</h3>
-              <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-white/78">
+              <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-white/84">
                 {locationPages.map((area) => (
                   <li key={area.slug}>
                     <Link href={getLocationPath(area.slug)} className="transition hover:text-white">
@@ -41,7 +41,7 @@ export function Footer() {
               </ul>
             </div>
           </div>
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/76">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/84">
             {navigation.map((item) => (
               <Link key={item.href} href={item.href} className="transition hover:text-white">
                 {item.label}
@@ -51,7 +51,7 @@ export function Footer() {
               Privacy & Terms
             </Link>
           </div>
-          <div className="flex flex-wrap items-center gap-3 text-sm text-white/78">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-white/84">
             <span className="font-semibold text-white">Follow:</span>
             <a
               href="https://www.facebook.com/profile.php?id=61558598529435"
@@ -70,10 +70,10 @@ export function Footer() {
               Instagram
             </a>
           </div>
-          <p className="text-xs text-white/60">
+          <p className="text-xs text-white/74">
             © {new Date().getFullYear()} {companyInfo.name}. All rights reserved. {companyInfo.licensedInsured}.
           </p>
-          <p className="text-xs text-white/60">
+          <p className="text-xs text-white/74">
             Website by{" "}
             <a
               href="https://hometownkc.agency"

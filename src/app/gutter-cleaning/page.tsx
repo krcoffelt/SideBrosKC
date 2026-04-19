@@ -36,13 +36,10 @@ export default function GutterCleaningPage() {
           buildFAQSchema(gutterCleaningFaqs),
         ]}
       />
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/60 to-white py-24 text-slate-900">
-        <div className="absolute inset-0">
-          <div className="absolute left-1/2 top-10 h-60 w-60 -translate-x-1/2 rounded-full bg-purple-200/40 blur-3xl" />
-        </div>
-        <Container className="relative grid items-center gap-10 lg:grid-cols-[1.2fr,1fr]">
+      <section className="bg-white py-24 text-slate-900">
+        <Container className="grid items-center gap-10 lg:grid-cols-[1.2fr,1fr]">
           <div className="space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
               Gutter Cleaning
             </p>
             <h1 className="text-4xl font-bold sm:text-5xl">
@@ -56,7 +53,7 @@ export default function GutterCleaningPage() {
               {gutterCleaningHighlights.map((highlight) => (
                 <div
                   key={highlight.title}
-                  className="glass-panel rounded-3xl border border-purple-500/10 bg-white p-5 text-slate-700"
+                  className="glass-panel p-5 text-slate-700"
                 >
                   <h2 className="text-lg font-semibold text-slate-900">{highlight.title}</h2>
                   <p className="mt-2 text-sm text-slate-600">{highlight.description}</p>
@@ -64,7 +61,7 @@ export default function GutterCleaningPage() {
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-3xl border border-purple-400/25 shadow-[0_30px_70px_rgba(111,58,255,0.18)]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
             <Image
               src="/images/SideBrosWebPic3.webp"
               alt="Exterior walkway and entry area cleaned by Side Bros KC"
@@ -88,7 +85,7 @@ export default function GutterCleaningPage() {
               Clean gutters protect more than the roofline. They help control drainage, reduce
               staining, and keep water from spilling where it should not.
             </p>
-            <ol className="space-y-4 border-l-2 border-purple-300 pl-6 text-sm text-slate-600">
+            <ol className="space-y-4 border-l-2 border-slate-300 pl-6 text-sm text-slate-600">
               <li>
                 <strong className="block font-semibold text-slate-900">1. Debris removal</strong>
                 Leaves, roof grit, and built-up debris are cleared from the gutter channels.

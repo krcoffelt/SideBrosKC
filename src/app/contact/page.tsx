@@ -94,8 +94,8 @@ export default function ContactPage() {
             </ul>
             <div className="mt-6 rounded-2xl bg-purple-600 p-5 text-sm text-white">
               <p className="font-semibold text-white">Need immediate assistance?</p>
-              <p className="mt-1 text-white/84">
-                Call or text <a href={companyInfo.phoneHref}>{companyInfo.phone}</a> and we’ll
+              <p className="mt-1 text-white/90">
+                Call or text <a href={companyInfo.phoneHref} className="font-semibold underline decoration-white/40 underline-offset-2">{companyInfo.phone}</a> and we’ll
                 respond as quickly as possible.
               </p>
             </div>

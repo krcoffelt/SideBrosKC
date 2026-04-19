@@ -16,7 +16,7 @@ export default function PrivacyPage() {
     <section className="bg-white py-16 text-slate-800">
       <Container className="space-y-10">
         <div className="space-y-3 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-600">
+          <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
             Privacy & Terms
           </p>
           <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="rounded-3xl border border-purple-500/10 bg-purple-50/40 p-6 shadow-sm">
+          <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
             <h2 className="text-xl font-semibold text-slate-900">Privacy Policy</h2>
             <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
               <li>
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
             </ul>
           </article>
 
-          <article className="rounded-3xl border border-purple-500/10 bg-white p-6 shadow-sm">
+          <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
             <h2 className="text-xl font-semibold text-slate-900">Terms of Service</h2>
             <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
               <li>
@@ -100,7 +100,7 @@ export default function PrivacyPage() {
           </article>
         </div>
 
-        <div className="rounded-3xl border border-purple-500/10 bg-white p-6 shadow-sm">
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
           <h2 className="text-xl font-semibold text-slate-900">Contact</h2>
           <p className="mt-3 text-sm text-slate-700">
             For privacy or terms questions, reach out to us:
@@ -108,13 +108,13 @@ export default function PrivacyPage() {
           <ul className="mt-3 space-y-2 text-sm text-slate-700">
             <li>
               <strong className="text-slate-900">Phone:</strong>{" "}
-              <a href={companyInfo.phoneHref} className="text-purple-600 hover:text-purple-700">
+              <a href={companyInfo.phoneHref} className="text-purple-600 hover:text-purple-800">
                 {companyInfo.phone}
               </a>
             </li>
             <li>
               <strong className="text-slate-900">Email:</strong>{" "}
-              <a href={`mailto:${companyInfo.email}`} className="text-purple-600 hover:text-purple-700">
+              <a href={`mailto:${companyInfo.email}`} className="text-purple-600 hover:text-purple-800">
                 {companyInfo.email}
               </a>
             </li>

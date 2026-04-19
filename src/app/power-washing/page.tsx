@@ -46,13 +46,10 @@ export default function PowerWashingPage() {
           buildFAQSchema(powerWashingFaqs),
         ]}
       />
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/60 to-white py-24 text-slate-900">
-        <div className="absolute inset-0">
-          <div className="absolute left-1/2 top-10 h-56 w-56 -translate-x-1/2 rounded-full bg-purple-200/40 blur-3xl" />
-        </div>
-        <Container className="relative grid items-center gap-10 lg:grid-cols-[1.2fr,1fr]">
+      <section className="bg-white py-24 text-slate-900">
+        <Container className="grid items-center gap-10 lg:grid-cols-[1.2fr,1fr]">
           <div className="space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
               Power Washing
             </p>
             <h1 className="text-4xl font-bold sm:text-5xl">
@@ -65,13 +62,13 @@ export default function PowerWashingPage() {
             <ul className="grid gap-3 text-sm text-slate-600 sm:grid-cols-2">
               {powerWashingServices.map((service) => (
                 <li key={service} className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-purple-400" aria-hidden="true" />
+                  <span className="mt-1 h-2 w-2 rounded-full bg-purple-600" aria-hidden="true" />
                   <span>{service}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="relative overflow-hidden rounded-3xl border border-purple-400/25 shadow-[0_30px_70px_rgba(111,58,255,0.18)]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
             <Image
               src="/images/SideBrosWebPic12.jpg"
               alt="Commercial building exterior after Side Bros KC power washing"
@@ -119,7 +116,7 @@ export default function PowerWashingPage() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="glass-panel rounded-3xl border border-purple-500/10 bg-white p-5 text-slate-700"
+                  className="glass-panel p-5 text-slate-700"
                 >
                   <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
                   <p className="mt-2 text-sm text-slate-600">{item.description}</p>

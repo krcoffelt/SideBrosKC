@@ -54,14 +54,10 @@ export default function ChristmasLightingPage() {
           buildFAQSchema(lightingFaqs),
         ]}
       />
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/60 to-white py-24 text-slate-900">
-        <div className="absolute inset-0">
-          <div className="absolute left-1/2 top-12 h-72 w-72 -translate-x-1/2 rounded-full bg-purple-200/45 blur-3xl" />
-          <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-purple-100/40 blur-3xl" />
-        </div>
-        <Container className="relative grid items-center gap-12 lg:grid-cols-[1.1fr,1fr]">
+      <section className="bg-white py-24 text-slate-900">
+        <Container className="grid items-center gap-12 lg:grid-cols-[1.1fr,1fr]">
           <div className="space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-600">
+            <p className="inline-flex rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
               Christmas Lighting
             </p>
             <h1 className="text-4xl font-bold sm:text-5xl">
@@ -75,7 +71,7 @@ export default function ChristmasLightingPage() {
               {lightingFeatures.map((feature) => (
                 <div
                   key={feature}
-                  className="flex items-center gap-3 rounded-3xl border border-purple-400/25 bg-white p-4 shadow-[0_18px_45px_rgba(111,58,255,0.18)]"
+                  className="flex items-center gap-3 rounded-3xl border border-slate-200 bg-white p-4 shadow-[0_18px_45px_rgba(15,23,42,0.08)]"
                 >
                   <CheckIcon className="h-5 w-5 text-purple-600" />
                   <p className="text-sm text-slate-600">{feature}</p>
@@ -83,7 +79,7 @@ export default function ChristmasLightingPage() {
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-3xl border border-purple-400/20 shadow-[0_30px_70px_rgba(111,58,255,0.18)]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
             <Image
               src="https://images.unsplash.com/photo-1573575159775-0c5f4e2ce32f?auto=format&fit=crop&w=1200&q=80"
               alt="Custom holiday lighting on a home"
@@ -103,13 +99,13 @@ export default function ChristmasLightingPage() {
             {packageOptions.map((pkg) => (
               <div
                 key={pkg.name}
-                className="glass-panel rounded-3xl border border-purple-500/10 bg-white p-8 text-slate-700"
+                className="glass-panel p-8 text-slate-700"
               >
                 <h2 className="text-2xl font-bold text-slate-900">{pkg.name} Packages</h2>
                 <ul className="mt-6 space-y-3 text-sm text-slate-600">
                   {pkg.details.map((detail) => (
                     <li key={detail} className="flex items-start gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-purple-400" aria-hidden="true" />
+                      <span className="mt-1 h-2 w-2 rounded-full bg-purple-600" aria-hidden="true" />
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -126,7 +122,7 @@ export default function ChristmasLightingPage() {
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
               A full-service lighting experience
             </h2>
-            <ol className="space-y-4 border-l-2 border-purple-300 pl-6 text-sm text-slate-600">
+            <ol className="space-y-4 border-l-2 border-slate-300 pl-6 text-sm text-slate-600">
               <li>
                 <strong className="block font-semibold text-slate-900">Consultation</strong>
                 Walk the property, align on vision, and capture measurements for a perfect fit.
