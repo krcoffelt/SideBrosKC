@@ -80,7 +80,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,12,28,0.86)_0%,rgba(7,12,28,0.74)_34%,rgba(7,12,28,0.46)_60%,rgba(7,12,28,0.28)_100%),radial-gradient(circle_at_top_right,rgba(111,58,255,0.3),transparent_34%),linear-gradient(180deg,rgba(11,16,33,0.18),rgba(11,16,33,0.34))]" />
         </div>
-        <div className="relative mx-auto grid min-h-[calc(100svh-88px)] max-w-[1440px] items-end gap-8 px-4 pb-8 pt-8 sm:px-6 sm:pb-10 sm:pt-10 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pb-16">
+        <div className="relative mx-auto flex min-h-[calc(100svh-88px)] max-w-[1440px] items-end px-4 pb-8 pt-8 sm:px-6 sm:pb-10 sm:pt-10 lg:px-8 lg:pb-16">
           <div className="max-w-3xl space-y-7 text-white">
             <p className="reveal-up text-xs font-semibold uppercase tracking-[0.42em] text-white/88">
               Side Bros KC LLC
@@ -125,54 +125,27 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hero-image-shell reveal-up reveal-delay-4 hidden gap-4 self-end md:grid lg:justify-self-end">
-            <div className="overflow-hidden rounded-[30px] border border-white/20 bg-white/14 p-3 shadow-[0_40px_90px_rgba(5,10,25,0.32)] backdrop-blur-sm">
-              <Image
-                src="/images/SideBrosWebPic5.webp"
-                alt="Driveway before cleaning"
-                width={700}
-                height={880}
-                sizes="(min-width: 1024px) 28vw, (min-width: 768px) 42vw, 86vw"
-                className="h-[280px] w-full rounded-[22px] object-cover lg:h-[340px] xl:h-[460px]"
-              />
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {heroImages.slice(1).map((image) => (
-                <div
-                  key={image.src}
-                  className="overflow-hidden rounded-[24px] border border-white/20 bg-white/14 p-2 shadow-[0_26px_60px_rgba(5,10,25,0.24)] backdrop-blur-sm"
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={420}
-                    height={420}
-                    sizes="(min-width: 1024px) 14vw, (min-width: 768px) 20vw, 42vw"
-                    className="h-28 w-full rounded-[18px] object-cover lg:h-32 xl:h-40"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
       <section className="border-b border-slate-200 bg-white py-8">
-        <div className="mx-auto grid max-w-6xl gap-4 px-4 sm:grid-cols-[auto,1fr,auto] sm:items-center sm:px-6 lg:px-8">
-          <div className="inline-flex w-fit rounded-full bg-purple-600 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white">
-            Seasonal Offer
-          </div>
-          <p className="text-sm leading-7 text-slate-700 sm:text-base">
-            Save 10% on Christmas lighting installations when you reserve by October 15.
-          </p>
-          <div>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-5 rounded-[28px] bg-purple-600 px-5 py-5 text-white shadow-[0_24px_60px_rgba(91,47,224,0.18)] sm:px-6 sm:py-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="space-y-2">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/78">
+                Seasonal Offer
+              </p>
+              <p className="max-w-2xl text-base font-semibold leading-7 text-white sm:text-lg">
+                Book by October 15 and save 10% on Christmas lighting installation.
+              </p>
+            </div>
             <Link
               href="/contact"
-              className="rounded-full bg-purple-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-purple-500"
+              className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-purple-600 transition hover:bg-slate-100 sm:w-auto"
               data-analytics-event="seasonal_offer_click"
               data-analytics-label="Seasonal offer claim"
             >
-              Claim Offer →
+              Claim Offer
             </Link>
           </div>
         </div>
