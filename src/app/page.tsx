@@ -85,8 +85,10 @@ export default function Home() {
             <p className="reveal-up text-xs font-semibold uppercase tracking-[0.42em] text-white/88">
               Side Bros KC LLC
             </p>
-            <h1 className="reveal-up reveal-delay-2 max-w-[13ch] text-4xl font-bold leading-[0.96] tracking-[-0.04em] sm:text-5xl lg:text-6xl xl:text-7xl">
-              The clean look Kansas City notices from the curb.
+            <h1 className="reveal-up reveal-delay-2 max-w-[16ch] text-3xl font-bold leading-[0.96] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
+              The clean finish
+              <br />
+              Kansas City notices.
             </h1>
             <p className="reveal-up reveal-delay-3 max-w-xl text-[15px] leading-7 text-white/90 sm:text-lg sm:leading-8">
               Fast quotes, sharp finishes, and crews that know how to make homes, storefronts, and
@@ -157,7 +159,7 @@ export default function Home() {
 
       <section className="border-b border-slate-200 bg-white py-8">
         <div className="mx-auto grid max-w-6xl gap-4 px-4 sm:grid-cols-[auto,1fr,auto] sm:items-center sm:px-6 lg:px-8">
-          <div className="rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.34em] text-white">
+          <div className="inline-flex w-fit rounded-full bg-purple-600 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white">
             Seasonal Offer
           </div>
           <p className="text-sm leading-7 text-slate-700 sm:text-base">
