@@ -80,24 +80,21 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,12,28,0.86)_0%,rgba(7,12,28,0.74)_34%,rgba(7,12,28,0.46)_60%,rgba(7,12,28,0.28)_100%),radial-gradient(circle_at_top_right,rgba(111,58,255,0.3),transparent_34%),linear-gradient(180deg,rgba(11,16,33,0.18),rgba(11,16,33,0.34))]" />
         </div>
-        <div className="relative mx-auto flex min-h-[calc(100svh-88px)] max-w-[1440px] items-end px-4 pb-8 pt-8 sm:px-6 sm:pb-10 sm:pt-10 lg:px-8 lg:pb-16">
-          <div className="max-w-3xl space-y-7 text-white">
-            <p className="reveal-up text-xs font-semibold uppercase tracking-[0.42em] text-white/88">
-              Side Bros KC LLC
-            </p>
-            <h1 className="reveal-up reveal-delay-2 max-w-[16ch] text-3xl font-bold leading-[0.96] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
+        <div className="relative mx-auto flex min-h-[calc(100svh-88px)] max-w-[1440px] items-center px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+          <div className="max-w-2xl space-y-5 text-white">
+            <h1 className="reveal-up reveal-delay-2 max-w-[14ch] text-3xl font-bold leading-[0.94] tracking-[-0.04em] text-white sm:text-5xl lg:text-[4.25rem]">
               The clean finish
               <br />
               Kansas City notices.
             </h1>
-            <p className="reveal-up reveal-delay-3 max-w-xl text-[15px] leading-7 text-white/90 sm:text-lg sm:leading-8">
+            <p className="reveal-up reveal-delay-3 max-w-lg text-sm leading-6 text-white/88 sm:text-base sm:leading-7">
               Fast quotes, sharp finishes, and crews that know how to make homes, storefronts, and
               service fleets look dialed in without the guesswork.
             </p>
-            <div className="reveal-up reveal-delay-4 flex flex-col gap-3 sm:flex-row">
+            <div className="reveal-up reveal-delay-4 flex flex-col gap-2.5 sm:flex-row">
               <Link
                 href="/contact"
-                className="accent-button w-full text-white hover:opacity-90 sm:min-w-[220px] sm:w-auto"
+                className="accent-button w-full text-white hover:opacity-90 sm:min-w-[180px] sm:w-auto"
                 data-analytics-event="home_hero_quote_click"
                 data-analytics-label="Home hero quote"
               >
@@ -105,23 +102,23 @@ export default function Home() {
               </Link>
               <a
                 href={companyInfo.phoneHref}
-                className="secondary-button w-full border-white/50 bg-slate-950/30 text-white backdrop-blur-sm hover:border-white hover:bg-white hover:text-slate-950 sm:min-w-[220px] sm:w-auto"
+                className="secondary-button w-full border-white/45 bg-slate-950/28 text-white backdrop-blur-sm hover:border-white hover:bg-white hover:text-slate-950 sm:min-w-[180px] sm:w-auto"
               >
                 Call {companyInfo.phone}
               </a>
             </div>
-            <div className="reveal-up reveal-delay-5 grid max-w-2xl gap-4 border-t border-white/25 pt-6 text-white/86 sm:grid-cols-3">
+            <div className="reveal-up reveal-delay-5 grid max-w-xl grid-cols-3 gap-3 border-t border-white/25 pt-4 text-white/86">
               <div>
-                <p className="text-3xl font-bold text-white">120+</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.24em]">Surfaces restored</p>
+                <p className="text-2xl font-bold text-white sm:text-3xl">120+</p>
+                <p className="mt-1 text-[10px] uppercase tracking-[0.18em] sm:text-xs sm:tracking-[0.22em]">Surfaces restored</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-white">80+</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.24em]">KC clients served</p>
+                <p className="text-2xl font-bold text-white sm:text-3xl">80+</p>
+                <p className="mt-1 text-[10px] uppercase tracking-[0.18em] sm:text-xs sm:tracking-[0.22em]">KC clients served</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-white">100%</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.24em]">Licensed and insured</p>
+                <p className="text-2xl font-bold text-white sm:text-3xl">100%</p>
+                <p className="mt-1 text-[10px] uppercase tracking-[0.18em] sm:text-xs sm:tracking-[0.22em]">Licensed and insured</p>
               </div>
             </div>
           </div>
