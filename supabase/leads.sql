@@ -15,6 +15,8 @@ create table if not exists public.leads (
 
 alter table public.leads enable row level security;
 
+drop policy if exists "Allow public lead inserts" on public.leads;
+
 create policy "Allow public lead inserts"
   on public.leads
   for insert
