@@ -8,20 +8,14 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
-        has: [{ type: "host", value: "thesidebroskc.com" }],
-        destination: "https://www.thesidebroskc.com/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
         has: [{ type: "host", value: "sidebroskc.com" }],
-        destination: "https://www.thesidebroskc.com/:path*",
+        destination: "https://thesidebroskc.com/:path*",
         permanent: true,
       },
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.sidebroskc.com" }],
-        destination: "https://www.thesidebroskc.com/:path*",
+        destination: "https://thesidebroskc.com/:path*",
         permanent: true,
       },
     ];
