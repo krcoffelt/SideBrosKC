@@ -236,7 +236,8 @@ async function sendWithResend(payload: ContactPayload, files: File[]) {
   });
 
   if (!response.ok) {
-    throw new Error("Email delivery failed.");
+    const errorText = await response.text().catch(() => "");
+    throw new Error(`Email delivery failed: ${response.status} ${errorText}`);
   }
 
   return true;
@@ -259,43 +260,34 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: validationError }, { status: 400 });
   }
 
+  let savedLead = false;
+  let deliveredNotification = false;
+
   try {
-    const savedLead = await saveLeadToSupabase(payload, files);
-    let deliveredNotification = false;
-
-    try {
-      deliveredNotification =
-        (await sendWithResend(payload, files)) || (await sendToWebhook(payload, files));
-    } catch (error) {
-      if (!savedLead) {
-        throw error;
-      }
-
-      console.error("Contact form notification failed after lead was saved", error);
-    }
-
-    const delivered = savedLead || deliveredNotification;
-
-    if (!delivered) {
-      return NextResponse.json(
-        {
-          message: `Quote requests are not configured yet. Please call ${companyInfo.phone} or email ${companyInfo.email}.`,
-        },
-        { status: 503 }
-      );
-    }
-
-    return NextResponse.json({
-      message: "Thanks. Your request has been sent and the Bros will follow up soon.",
-    });
+    savedLead = await saveLeadToSupabase(payload, files);
   } catch (error) {
-    console.error("Contact form delivery failed", error);
+    console.error("Contact form Supabase lead insert failed", error);
+  }
 
+  try {
+    deliveredNotification =
+      (await sendWithResend(payload, files)) || (await sendToWebhook(payload, files));
+  } catch (error) {
+    console.error("Contact form notification failed", error);
+  }
+
+  const delivered = savedLead || deliveredNotification;
+
+  if (!delivered) {
     return NextResponse.json(
       {
         message: `We could not send your request right now. Please call ${companyInfo.phone} or email ${companyInfo.email}.`,
       },
-      { status: 502 }
+      { status: 503 }
     );
   }
+
+  return NextResponse.json({
+    message: "Thanks. Your request has been sent and the Bros will follow up soon.",
+  });
 }
