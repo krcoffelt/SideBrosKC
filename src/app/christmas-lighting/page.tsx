@@ -81,8 +81,8 @@ export default function ChristmasLightingPage() {
           </div>
           <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
             <Image
-              src="https://images.unsplash.com/photo-1573575159775-0c5f4e2ce32f?auto=format&fit=crop&w=1200&q=80"
-              alt="Custom holiday lighting on a home"
+              src="/images/SideBrosWebPic12.jpg"
+              alt="Residential exterior service project by Side Bros KC"
               width={1000}
               height={700}
               sizes="(min-width: 1024px) 40vw, 100vw"

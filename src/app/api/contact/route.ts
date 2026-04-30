@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { companyInfo } from "@/data/company";
+import { createClient as createSupabaseClient } from "@/utils/supabase/server";
 
 const allowedFileTypes = new Set(["image/jpeg", "image/png", "image/webp"]);
 const maxFiles = 3;
@@ -166,6 +168,39 @@ async function sendToWebhook(payload: ContactPayload, files: File[]) {
   return true;
 }
 
+async function saveLeadToSupabase(payload: ContactPayload, files: File[]) {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY) {
+    return false;
+  }
+
+  const cookieStore = await cookies();
+  const supabase = createSupabaseClient(cookieStore);
+  const tableName = process.env.SUPABASE_LEADS_TABLE || "leads";
+
+  const { error } = await supabase.from(tableName).insert({
+    name: payload.name,
+    email: payload.email,
+    phone: payload.phone,
+    preferred_contact: payload.preferredContact,
+    services: payload.services,
+    message: payload.message || null,
+    utm: payload.utm,
+    submitted_at: payload.submittedAt,
+    photos: files.map((file) => ({
+      name: file.name,
+      type: file.type,
+      size: file.size,
+    })),
+    source: "website_contact_form",
+  });
+
+  if (error) {
+    throw new Error(`Supabase lead insert failed: ${error.message}`);
+  }
+
+  return true;
+}
+
 async function sendWithResend(payload: ContactPayload, files: File[]) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.CONTACT_FROM_EMAIL;
@@ -225,8 +260,21 @@ export async function POST(request: Request) {
   }
 
   try {
-    const delivered =
-      (await sendToWebhook(payload, files)) || (await sendWithResend(payload, files));
+    const savedLead = await saveLeadToSupabase(payload, files);
+    let deliveredNotification = false;
+
+    try {
+      deliveredNotification =
+        (await sendWithResend(payload, files)) || (await sendToWebhook(payload, files));
+    } catch (error) {
+      if (!savedLead) {
+        throw error;
+      }
+
+      console.error("Contact form notification failed after lead was saved", error);
+    }
+
+    const delivered = savedLead || deliveredNotification;
 
     if (!delivered) {
       return NextResponse.json(

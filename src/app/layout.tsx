@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,23 +6,7 @@ import { MobileActionBar } from "@/components/MobileActionBar";
 import { AnalyticsScripts } from "@/components/AnalyticsScripts";
 import { StructuredData } from "@/components/StructuredData";
 import { companyInfo } from "@/data/company";
-import {
-  buildLocalBusinessSchema,
-  buildOrganizationSchema,
-  buildWebsiteSchema,
-} from "@/lib/seo";
-
-const montserrat = Montserrat({
-  variable: "--font-heading",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const openSans = Open_Sans({
-  variable: "--font-body",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+import { buildLocalBusinessSchema, buildOrganizationSchema, buildWebsiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: companyInfo.name,
@@ -67,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${openSans.variable} font-body antialiased`}>
+      <body className="font-body antialiased">
         <StructuredData
           id="site-structured-data"
           data={[buildOrganizationSchema(), buildLocalBusinessSchema(), buildWebsiteSchema()]}

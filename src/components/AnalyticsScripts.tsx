@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import Script from "next/script";
 import { usePathname, useSearchParams } from "next/navigation";
 import { companyInfo } from "@/data/company";
@@ -87,7 +87,9 @@ export function AnalyticsScripts() {
           gtag('config', '${measurementId}', { send_page_view: false });
         `}
       </Script>
-      <PageViewTracker />
+      <Suspense fallback={null}>
+        <PageViewTracker />
+      </Suspense>
       <ClickTracker />
     </>
   );

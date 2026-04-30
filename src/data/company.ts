@@ -192,7 +192,7 @@ export function getLocationBySlug(slug: string) {
 export const companyInfo = {
   name: "Side Bros KC LLC",
   tagline: "The Bros Who Bring the Shine to KC.",
-  siteUrl: "https://www.sidebroskc.com",
+  siteUrl: "https://www.thesidebroskc.com",
   phone: "(913) 286-9119",
   phoneHref: "tel:19132869119",
   email: "Sidebroskc@gmail.com",
